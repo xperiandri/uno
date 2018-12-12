@@ -16,5 +16,10 @@ namespace SamplesApp
 			Content = new TextBlock() { Text= "Hello macOS!", FontSize = 72, Margin = new Thickness(12) };
 #endif
 		}
+
+		private void OnRatingControl(object sender, RoutedEventArgs e)
+		{
+			Frame.Navigate(typeof(Samples.RatingControlSample.RatingControlPage));
+		}
 	}
 }
