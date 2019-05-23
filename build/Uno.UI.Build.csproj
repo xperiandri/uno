@@ -14,8 +14,8 @@
 
 		<NuGetBin>.\nuget\NuGet.exe</NuGetBin>
 		<OutputDir>$(BUILD_ARTIFACTSTAGINGDIRECTORY)</OutputDir>
-		<Configuration>$(CombinedConfiguration.Split('|')[0])</Configuration>
-		<Platform>$(CombinedConfiguration.Split('|')[1])</Platform>
+		<BuildConfiguration>$(CombinedConfiguration.Split('|')[0])</BuildConfiguration>
+		<BuildPlatform>$(CombinedConfiguration.Split('|')[1])</BuildPlatform>
 		<AppEnvironment Condition="'$(CombinedConfiguration)' != '' and $(CombinedConfiguration.Split('|').Length) > 2">$(CombinedConfiguration.Split('|')[2])</AppEnvironment>
 
 		<UpdateAssemblyInfo>false</UpdateAssemblyInfo>
@@ -54,7 +54,7 @@
 
 	<Target Name="UnoBuild" AfterTargets="Build" Condition="'$(BuildingInsideVisualStudio)'==''">
 
-		<Message Text="Building for $(Configuration) and $(Platform) BuildReason:$(BUILD_REASON) Version:$(GitVersion_FullSemVer)" />
+		<Message Text="Building for $(BuildConfiguration) and $(BuildPlatform) BuildReason:$(BUILD_REASON) Version:$(GitVersion_FullSemVer)" />
 
 		<!-- 
     Use NuGet 4.3.0 or later for the restore 
@@ -65,11 +65,11 @@
 
 		<CallTarget Targets="GetVersion;UpdateFileVersions;UpdateTasksSHA" Condition="$(_isWindows)" />
 
-		<CallTarget Targets="BuildCI" Condition="'$(Configuration)'=='Release' and $(_isWindows)" />
-		<CallTarget Targets="BuildCImacOS" Condition="'$(Configuration)'=='Release' and !$(_isWindows)" />
+		<CallTarget Targets="BuildCI" Condition="'$(BuildConfiguration)'=='Release' and $(_isWindows)" />
+		<CallTarget Targets="BuildCImacOS" Condition="'$(BuildConfiguration)'=='Release' and !$(_isWindows)" />
 
-		<CallTarget Targets="BuildNuGetPackage" Condition="'$(Configuration)'=='Release'" />
-		<CallTarget Targets="PublishVisx" Condition="'$(Configuration)'=='Release' and $(_isWindows)" />
+		<CallTarget Targets="BuildNuGetPackage" Condition="'$(BuildConfiguration)'=='Release'" />
+		<CallTarget Targets="PublishVisx" Condition="'$(BuildConfiguration)'=='Release' and $(_isWindows)" />
 	</Target>
 
 	<Target Name="UpdateFileVersions">
