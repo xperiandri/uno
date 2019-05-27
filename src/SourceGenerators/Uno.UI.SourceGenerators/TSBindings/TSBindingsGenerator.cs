@@ -188,9 +188,9 @@ namespace Uno.UI.SourceGenerators.TSBindings
 						{
 							using (sb.BlockInvariant(""))
 							{
-								sb.AppendLineInvariant($"var stringLength = lengthBytesUTF8({value});");
+								sb.AppendLineInvariant($"var stringLength = {value}.length;");
 								sb.AppendLineInvariant($"var pString = Module._malloc(stringLength + 1);");
-								sb.AppendLineInvariant($"stringToUTF8({value}, pString, stringLength + 1);");
+								sb.AppendLineInvariant($"Module.stringToUTF16({value}, pString, stringLength + 1);");
 
 								sb.AppendLineInvariant(
 									$"Module.setValue(pData + {fieldOffset}, pString, \"*\");"
@@ -287,7 +287,7 @@ namespace Uno.UI.SourceGenerators.TSBindings
 
 								using (sb.BlockInvariant("if(ptr !== 0)"))
 								{
-									sb.AppendLineInvariant($"ret.{field.Name} = {GetTSType(field.Type)}(Module.UTF8ToString(ptr));");
+									sb.AppendLineInvariant($"ret.{field.Name} = {GetTSType(field.Type)}(Module.UTF16ToString(ptr));");
 								}
 								sb.AppendLineInvariant("else");
 								using (sb.BlockInvariant(""))

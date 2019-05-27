@@ -46,7 +46,7 @@ namespace Uno.UI.Xaml
 		[StructLayout(LayoutKind.Sequential, Pack = 4)]
 		private struct WindowManagerInitParams
 		{
-			[MarshalAs(TSInteropMarshaller.LPUTF8Str)]
+			[MarshalAs(UnmanagedType.LPWStr)]
 			public string LocalFolderPath;
 
 			public bool IsHostedMode;
@@ -103,12 +103,12 @@ namespace Uno.UI.Xaml
 		{
 			public IntPtr HtmlId;
 
-			[MarshalAs(TSInteropMarshaller.LPUTF8Str)]
+			[MarshalAs(UnmanagedType.LPWStr)]
 			public string TagName;
 
 			public IntPtr Handle;
 
-			[MarshalAs(TSInteropMarshaller.LPUTF8Str)]
+			[MarshalAs(UnmanagedType.LPWStr)]
 			public string Type;
 
 			public bool IsSvg;
@@ -117,7 +117,7 @@ namespace Uno.UI.Xaml
 
 			public int Classes_Length;
 
-			[MarshalAs(UnmanagedType.LPArray, ArraySubType = TSInteropMarshaller.LPUTF8Str)]
+			[MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.LPWStr)]
 			public string[] Classes;
 		}
 
@@ -388,7 +388,7 @@ namespace Uno.UI.Xaml
 
 			public int Pairs_Length;
 
-			[MarshalAs(UnmanagedType.LPArray, ArraySubType = TSInteropMarshaller.LPUTF8Str)]
+			[MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.LPWStr)]
 			public string[] Pairs;
 		}
 
@@ -421,7 +421,7 @@ namespace Uno.UI.Xaml
 		{
 			public IntPtr HtmlId;
 
-			[MarshalAs(TSInteropMarshaller.LPUTF8Str)]
+			[MarshalAs(UnmanagedType.LPWStr)]
 			public string Name;
 		}
 		#endregion
@@ -467,7 +467,7 @@ namespace Uno.UI.Xaml
 
 			public int Pairs_Length;
 
-			[MarshalAs(UnmanagedType.LPArray, ArraySubType = TSInteropMarshaller.LPUTF8Str)]
+			[MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.LPWStr)]
 			public string[] Pairs;
 		}
 
@@ -569,7 +569,7 @@ namespace Uno.UI.Xaml
 
 			public int Styles_Length;
 
-			[MarshalAs(UnmanagedType.LPArray, ArraySubType = TSInteropMarshaller.LPUTF8Str)]
+			[MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.LPWStr)]
 			public string[] Styles;
 		}
 		#endregion
@@ -605,15 +605,15 @@ namespace Uno.UI.Xaml
 		{
 			public IntPtr HtmlId;
 
-			[MarshalAs(TSInteropMarshaller.LPUTF8Str)]
+			[MarshalAs(UnmanagedType.LPWStr)]
 			public string EventName;
 
 			public bool OnCapturePhase;
 
-			[MarshalAs(TSInteropMarshaller.LPUTF8Str)]
+			[MarshalAs(UnmanagedType.LPWStr)]
 			public string EventFilterName;
 
-			[MarshalAs(TSInteropMarshaller.LPUTF8Str)]
+			[MarshalAs(UnmanagedType.LPWStr)]
 			public string EventExtractorName;
 		}
 		#endregion
@@ -690,7 +690,7 @@ namespace Uno.UI.Xaml
 		{
 			public IntPtr HtmlId;
 
-			[MarshalAs(TSInteropMarshaller.LPUTF8Str)]
+			[MarshalAs(UnmanagedType.LPWStr)]
 			public string Html;
 		}
 
