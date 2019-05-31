@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Globalization;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
+using Uno.UI.Extensions;
 
 #if XAMARIN_IOS_UNIFIED
 using Foundation;
@@ -115,9 +116,7 @@ namespace Uno.Media
 #if __IOS__
 			return(bezierPath != null) ?  new CGPath(bezierPath.CGPath) :  new CGPath();
 #elif __MACOS__
-			return(bezierPath != null) ?  new CGPath(bezierPath.CGPath) :  new CGPath();
-			// macOS TODO
-			throw new NotImplementedException();
+			return(bezierPath != null) ?  bezierPath.ToCGPath() :  new CGPath();
 #endif
 		}
 #endif
