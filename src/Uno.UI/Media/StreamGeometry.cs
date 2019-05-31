@@ -115,6 +115,7 @@ namespace Uno.Media
 #if __IOS__
 			return(bezierPath != null) ?  new CGPath(bezierPath.CGPath) :  new CGPath();
 #elif __MACOS__
+			return(bezierPath != null) ?  new CGPath(bezierPath.CGPath) :  new CGPath();
 			// macOS TODO
 			throw new NotImplementedException();
 #endif
