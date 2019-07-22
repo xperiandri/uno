@@ -166,8 +166,14 @@ namespace Umbrella.UI.TestComparer
 			testSuiteAssemblyNode.SetAttribute("type", "Assembly");
 			testSuiteAssemblyNode.SetAttribute("name", platform);
 
+			var environmentNode = doc.CreateElement("environment");
+			testSuiteAssemblyNode.AppendChild(environmentNode);
+			environmentNode.SetAttribute("machine-name", Environment.MachineName);
+			environmentNode.SetAttribute("platform", platform);
+
 			var testSuiteFixtureNode = doc.CreateElement("test-suite");
 			testSuiteAssemblyNode.AppendChild(testSuiteFixtureNode);
+
 
 			testSuiteFixtureNode.SetAttribute("type", "TestFixture");
 			testSuiteFixtureNode.SetAttribute("name", resultsId);
@@ -191,8 +197,8 @@ namespace Umbrella.UI.TestComparer
 
 				var lastTestRun = run.ResultRun.LastOrDefault();
 
-				testCaseNode.SetAttribute("name", run.TestName);
-				testCaseNode.SetAttribute("fullname", run.TestName);
+				testCaseNode.SetAttribute("name", SanitizeTestName(run.TestName));
+				testCaseNode.SetAttribute("fullname", SanitizeTestName(run.TestName));
 				testCaseNode.SetAttribute("duration", "0");
 				testCaseNode.SetAttribute("time", "0");
 
@@ -232,6 +238,9 @@ namespace Umbrella.UI.TestComparer
 				doc.WriteTo(file);
 			}
 		}
+
+		private static string SanitizeTestName(string testName)
+			=> testName.Replace(" ", "_");
 
 		private static void AddAttachment(XmlDocument doc, XmlElement attachmentsNode, string filePath, string description)
 		{
