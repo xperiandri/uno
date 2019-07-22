@@ -35,8 +35,8 @@ namespace Umbrella.UI.TestComparer
 
 				new AppCenterTestsDownloader(appCenterApiKey).Download(appCenterApiKey, basePath, runLimit).Wait();
 
-				ProcessFiles(basePath, basePath, "", "ios");
-				ProcessFiles(basePath, basePath, "", "Android");
+				ProcessFiles(basePath, basePath, "", "ios", "0");
+				ProcessFiles(basePath, basePath, "", "Android", "0");
 			}
 			else if (args[0] == "azdo")
 			{
@@ -74,9 +74,9 @@ namespace Umbrella.UI.TestComparer
 				downloader.DownloadArtifacts(basePath, projectName, definitionName, artifactName, sourceBranch, targetBranch, currentBuild, runLimit).Wait();
 
 				var artifactsBasePath = Path.Combine(basePath, "artifacts");
-				ProcessFiles(basePath, artifactsBasePath, artifactInnerBasePath, "wasm");
-				ProcessFiles(basePath, artifactsBasePath, artifactInnerBasePath, "wasm-automated");
-				ProcessFiles(basePath, artifactsBasePath, artifactInnerBasePath, "android");
+				ProcessFiles(basePath, artifactsBasePath, artifactInnerBasePath, "wasm", currentBuild.ToString());
+				ProcessFiles(basePath, artifactsBasePath, artifactInnerBasePath, "wasm-automated", currentBuild.ToString());
+				ProcessFiles(basePath, artifactsBasePath, artifactInnerBasePath, "android", currentBuild.ToString());
 			}
 			else if (args[0] == "compare")
 			{
@@ -124,34 +124,36 @@ namespace Umbrella.UI.TestComparer
 			}
 		}
 
-		private static void ProcessFiles(string basePath, string artifactsBasePath, string artifactsInnerBasePath, string platform)
+		private static void ProcessFiles(string basePath, string artifactsBasePath, string artifactsInnerBasePath, string platform, string buildId)
 		{
 			var result = new TestFilesComparer(basePath, artifactsBasePath, artifactsInnerBasePath, platform).Compare();
 
 			GenerateHTMLResults(basePath, platform, result);
-			GenerateNUnitTestResults(basePath, platform, result);
+			GenerateNUnitTestResults(basePath, platform, result, buildId);
 		}
 
-		private static void GenerateNUnitTestResults(string basePath, string platform, CompareResult compareResult)
+		private static void GenerateNUnitTestResults(string basePath, string platform, CompareResult compareResult, string buildId)
 		{
 			var resultsId = $"{DateTime.Now:yyyyMMdd-hhmmss}";
 			var resultsFilePath = Path.Combine(basePath, $"Results-{platform}-{resultsId}.xml");
 
+			var success = !compareResult.Tests.Any(t => t.ResultRun.LastOrDefault()?.HasChanged ?? false);
+			var successCount = compareResult.Tests.Count(t => t.ResultRun.LastOrDefault()?.HasChanged ?? false);
+
 			var doc = new XmlDocument();
-			var rootNode = doc.CreateElement("test-results");
+			var rootNode = doc.CreateElement("test-run");
 			doc.AppendChild(rootNode);
+			rootNode.SetAttribute("id", buildId);
 			rootNode.SetAttribute("name", resultsId);
+			rootNode.SetAttribute("testcasecount", compareResult.TotalTests.ToString());
 			rootNode.SetAttribute("total", compareResult.TotalTests.ToString());
+			rootNode.SetAttribute("result", success ? "Success" : "Failed");
 			rootNode.SetAttribute("errors", (compareResult.TotalTests - compareResult.UnchangedTests).ToString());
-			rootNode.SetAttribute("failures", "0");
-			rootNode.SetAttribute("not-run", "0");
-			rootNode.SetAttribute("ignored", "0");
-			rootNode.SetAttribute("invalid", "0");
-			rootNode.SetAttribute("skipped", "0");
+			rootNode.SetAttribute("passed", successCount.ToString());
 
 			var now = DateTimeOffset.Now;
-			rootNode.SetAttribute("date", now.ToString("YYYY-MM-DD"));
-			rootNode.SetAttribute("time", now.ToString("HH:mm:SS"));
+			rootNode.SetAttribute("run-date", now.ToString("yyyy-MM-dd"));
+			rootNode.SetAttribute("start-time", now.ToString("HH:mm:ss"));
 
 			var resultsNode = doc.CreateElement("results");
 			rootNode.AppendChild(resultsNode);
@@ -163,17 +165,13 @@ namespace Umbrella.UI.TestComparer
 			testSuiteNode.SetAttribute("name", resultsId);
 			testSuiteNode.SetAttribute("executed", "true");
 
-			var success = !compareResult.Tests.Any(t => t.ResultRun.LastOrDefault()?.HasChanged ?? false);
 			testSuiteNode.SetAttribute("result", success ? "Success" : "Failure");
 			testSuiteNode.SetAttribute("success", success.ToString());
 
 			foreach (var run in compareResult.Tests)
 			{
-				var testSuiteResulstNode = doc.CreateElement("results");
-				testSuiteNode.AppendChild(testSuiteResulstNode);
-
 				var testCaseNode = doc.CreateElement("test-case");
-				testSuiteResulstNode.AppendChild(testCaseNode);
+				testSuiteNode.AppendChild(testCaseNode);
 
 				var lastTestRun = run.ResultRun.LastOrDefault();
 
@@ -181,8 +179,7 @@ namespace Umbrella.UI.TestComparer
 				testCaseNode.SetAttribute("executed", "True");
 
 				var testRunSuccess = !(lastTestRun?.HasChanged ?? false);
-				testCaseNode.SetAttribute("success", testRunSuccess.ToString());
-				testCaseNode.SetAttribute("result", testRunSuccess ? "Success" : "Failure");
+				testCaseNode.SetAttribute("result", testRunSuccess ? "Success" : "Failed");
 
 				if (lastTestRun != null)
 				{
