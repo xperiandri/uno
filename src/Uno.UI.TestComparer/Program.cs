@@ -155,11 +155,8 @@ namespace Umbrella.UI.TestComparer
 			rootNode.SetAttribute("run-date", now.ToString("yyyy-MM-dd"));
 			rootNode.SetAttribute("start-time", now.ToString("HH:mm:ss"));
 
-			var resultsNode = doc.CreateElement("results");
-			rootNode.AppendChild(resultsNode);
-
 			var testSuiteNode = doc.CreateElement("test-suite");
-			resultsNode.AppendChild(testSuiteNode);
+			rootNode.AppendChild(testSuiteNode);
 
 			testSuiteNode.SetAttribute("type", "TestFixture");
 			testSuiteNode.SetAttribute("name", resultsId);
