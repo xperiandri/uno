@@ -160,28 +160,33 @@ namespace Umbrella.UI.TestComparer
 			rootNode.SetAttribute("run-date", now.ToString("yyyy-MM-dd"));
 			rootNode.SetAttribute("start-time", now.ToString("HH:mm:ss"));
 
-			var testSuiteNode = doc.CreateElement("test-suite");
-			rootNode.AppendChild(testSuiteNode);
+			var testSuiteAssemblyNode = doc.CreateElement("test-suite");
+			rootNode.AppendChild(testSuiteAssemblyNode);
+			testSuiteAssemblyNode.SetAttribute("type", "Assembly");
+			testSuiteAssemblyNode.SetAttribute("name", platform);
 
-			testSuiteNode.SetAttribute("type", "TestFixture");
-			testSuiteNode.SetAttribute("name", resultsId);
-			testSuiteNode.SetAttribute("executed", "true");
+			var testSuiteFixtureNode = doc.CreateElement("test-suite");
+			testSuiteAssemblyNode.AppendChild(testSuiteFixtureNode);
 
-			testSuiteNode.SetAttribute("testcasecount", compareResult.TotalTests.ToString());
-			testSuiteNode.SetAttribute("result", success ? "Success" : "Failed");
-			testSuiteNode.SetAttribute("time", "0");
-			testSuiteNode.SetAttribute("total", compareResult.TotalTests.ToString());
-			testSuiteNode.SetAttribute("errors", (compareResult.TotalTests - compareResult.UnchangedTests).ToString());
-			testSuiteNode.SetAttribute("passed", successCount.ToString());
-			testSuiteNode.SetAttribute("failed", "0");
-			testSuiteNode.SetAttribute("inconclusive", "0");
-			testSuiteNode.SetAttribute("skipped", "0");
-			testSuiteNode.SetAttribute("asserts", "0");
+			testSuiteFixtureNode.SetAttribute("type", "TestFixture");
+			testSuiteFixtureNode.SetAttribute("name", resultsId);
+			testSuiteFixtureNode.SetAttribute("executed", "true");
+
+			testSuiteFixtureNode.SetAttribute("testcasecount", compareResult.TotalTests.ToString());
+			testSuiteFixtureNode.SetAttribute("result", success ? "Success" : "Failed");
+			testSuiteFixtureNode.SetAttribute("time", "0");
+			testSuiteFixtureNode.SetAttribute("total", compareResult.TotalTests.ToString());
+			testSuiteFixtureNode.SetAttribute("errors", (compareResult.TotalTests - compareResult.UnchangedTests).ToString());
+			testSuiteFixtureNode.SetAttribute("passed", successCount.ToString());
+			testSuiteFixtureNode.SetAttribute("failed", "0");
+			testSuiteFixtureNode.SetAttribute("inconclusive", "0");
+			testSuiteFixtureNode.SetAttribute("skipped", "0");
+			testSuiteFixtureNode.SetAttribute("asserts", "0");
 
 			foreach (var run in compareResult.Tests)
 			{
 				var testCaseNode = doc.CreateElement("test-case");
-				testSuiteNode.AppendChild(testCaseNode);
+				testSuiteFixtureNode.AppendChild(testCaseNode);
 
 				var lastTestRun = run.ResultRun.LastOrDefault();
 
