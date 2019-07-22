@@ -4,7 +4,6 @@ parameters:
 jobs:
 
 - job: Wasm_UITests_Compare
-  dependsOn: Wasm_UITests_Snap
 
   pool:
     vmImage: 'vs2017-win2016'
