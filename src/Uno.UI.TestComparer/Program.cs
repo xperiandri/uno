@@ -146,10 +146,15 @@ namespace Umbrella.UI.TestComparer
 			rootNode.SetAttribute("id", buildId);
 			rootNode.SetAttribute("name", resultsId);
 			rootNode.SetAttribute("testcasecount", compareResult.TotalTests.ToString());
-			rootNode.SetAttribute("total", compareResult.TotalTests.ToString());
 			rootNode.SetAttribute("result", success ? "Success" : "Failed");
+			rootNode.SetAttribute("time", "0");
+			rootNode.SetAttribute("total", compareResult.TotalTests.ToString());
 			rootNode.SetAttribute("errors", (compareResult.TotalTests - compareResult.UnchangedTests).ToString());
 			rootNode.SetAttribute("passed", successCount.ToString());
+			rootNode.SetAttribute("failed", "0");
+			rootNode.SetAttribute("inconclusive", "0");
+			rootNode.SetAttribute("skipped", "0");
+			rootNode.SetAttribute("asserts", "0");
 
 			var now = DateTimeOffset.Now;
 			rootNode.SetAttribute("run-date", now.ToString("yyyy-MM-dd"));
@@ -162,8 +167,16 @@ namespace Umbrella.UI.TestComparer
 			testSuiteNode.SetAttribute("name", resultsId);
 			testSuiteNode.SetAttribute("executed", "true");
 
-			testSuiteNode.SetAttribute("result", success ? "Success" : "Failure");
-			testSuiteNode.SetAttribute("success", success.ToString());
+			testSuiteNode.SetAttribute("testcasecount", compareResult.TotalTests.ToString());
+			testSuiteNode.SetAttribute("result", success ? "Success" : "Failed");
+			testSuiteNode.SetAttribute("time", "0");
+			testSuiteNode.SetAttribute("total", compareResult.TotalTests.ToString());
+			testSuiteNode.SetAttribute("errors", (compareResult.TotalTests - compareResult.UnchangedTests).ToString());
+			testSuiteNode.SetAttribute("passed", successCount.ToString());
+			testSuiteNode.SetAttribute("failed", "0");
+			testSuiteNode.SetAttribute("inconclusive", "0");
+			testSuiteNode.SetAttribute("skipped", "0");
+			testSuiteNode.SetAttribute("asserts", "0");
 
 			foreach (var run in compareResult.Tests)
 			{
@@ -173,7 +186,7 @@ namespace Umbrella.UI.TestComparer
 				var lastTestRun = run.ResultRun.LastOrDefault();
 
 				testCaseNode.SetAttribute("name", run.TestName);
-				testCaseNode.SetAttribute("executed", "True");
+				testCaseNode.SetAttribute("time", "0");
 
 				var testRunSuccess = !(lastTestRun?.HasChanged ?? false);
 				testCaseNode.SetAttribute("result", testRunSuccess ? "Success" : "Failed");
