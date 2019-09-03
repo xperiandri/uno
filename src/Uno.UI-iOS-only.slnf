@@ -12,6 +12,7 @@
       "T4Generator\\T4Generator.csproj",
       "Uno.Foundation\\Uno.Foundation.csproj",
       "Uno.UI.BindingHelper.Android\\Uno.UI.BindingHelper.Android.csproj",
+      "Uno.UI.Design\\Uno.UI.Design.csproj",
       "Uno.UI.Maps\\Uno.UI.Maps.csproj",
       "Uno.UI.RuntimeTests\\Uno.UI.RuntimeTests.csproj",
       "Uno.UI.Toolkit\\Uno.UI.Toolkit.csproj",
