@@ -46,5 +46,36 @@ namespace SamplesApp.UITests.Windows_UI_Xaml_Controls.ComboBoxTests
 
 			TakeScreenshot("AfterClickMe");
 		}
+
+		[Test]
+		[AutoRetry]
+		public void ComboBoxTests_FlyoutTest()
+		{
+			Run("UITests.Shared.Windows_UI_Xaml_Controls.CommandBar.CommandBar_Xaml_Automated");
+
+			var flyoutButton = _app.Marked("FlyoutButton");
+			var item1 = _app.Marked("Item1");
+			var item3 = _app.Marked("Item3");
+			var clickResult = _app.Marked("clickResult");
+			var commandResult = _app.Marked("commandResult");
+			_app.WaitForElement(flyoutButton);
+
+			TakeScreenshot("Initial");
+			_app.Tap(flyoutButton);
+
+			TakeScreenshot("After tap flyoutButton");
+
+			_app.Tap(item1);
+			_app.WaitForDependencyPropertyValue(clickResult, "Text", "Item1");
+			_app.WaitForDependencyPropertyValue(commandResult, "Text", "FlyoutClicked 1");
+
+			_app.Tap(flyoutButton);
+
+			_app.Tap(item3);
+			_app.WaitForDependencyPropertyValue(clickResult, "Text", "Item3");
+			_app.WaitForDependencyPropertyValue(commandResult, "Text", "FlyoutClicked 3");
+
+			TakeScreenshot("Final");
+		}
 	}
 }

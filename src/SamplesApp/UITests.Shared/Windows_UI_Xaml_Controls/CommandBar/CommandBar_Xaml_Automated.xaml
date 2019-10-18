@@ -26,13 +26,25 @@
 							Icon="Play"
 							Label="Play"
 							Click="Button_Click"/>
+			<AppBarButton Icon="Play" Label="{x:Bind FlyoutItemCommand}" x:Name="FlyoutButton">
+				<AppBarButton.Flyout>
+					<MenuFlyout>
+						<MenuFlyoutItem Text="Item1" Click="FlyoutItem_Click" Command="{x:Bind FlyoutItemCommand}" CommandParameter="1"  />
+						<MenuFlyoutItem Text="Item2" Click="FlyoutItem_Click" Command="{x:Bind FlyoutItemCommand}" CommandParameter="2" />
+						<MenuFlyoutItem Text="Item3" Click="FlyoutItem_Click" Command="{x:Bind FlyoutItemCommand}" CommandParameter="3"  />
+						<MenuFlyoutItem Text="Item4" Click="FlyoutItem_Click" Command="{x:Bind FlyoutItemCommand}" CommandParameter="4" />
+						<MenuFlyoutItem Text="Item5" Click="FlyoutItem_Click" Command="{x:Bind FlyoutItemCommand}" CommandParameter="5" />
+					</MenuFlyout>
+				</AppBarButton.Flyout>
+			</AppBarButton>
 			<CommandBar.Content>
 				<Button x:Name="appBarContentButton" Content="Click me" 
 								Click="Button_Click"/>
 			</CommandBar.Content>
 		</CommandBar>
 		<StackPanel Grid.Row="1">
-			<TextBlock x:Name="clickResult" />
+			<TextBlock x:Name="clickResult" Text="empty" />
+			<TextBlock x:Name="commandResult" Text="empty" />
 		</StackPanel>
 		<CommandBar x:Name="cb_Down" Grid.Row="2" Style="{StaticResource XamlCommandBar}">
 			<AppBarToggleButton x:Name="shuffleButton_Down"
