@@ -5,6 +5,7 @@ using System.Numerics;
 using Windows.Devices.Input;
 using Windows.Foundation;
 using Uno.Extensions;
+using Microsoft.Extensions.Logging;
 
 namespace Windows.UI.Input
 {
@@ -76,7 +77,14 @@ namespace Windows.UI.Input
 				var hasUpdate = false;
 				foreach (var point in updated)
 				{
-					hasUpdate |= TryUpdate(point);
+					var pointUpdated = TryUpdate(point);
+
+					if (_recognizer.Log().IsEnabled(LogLevel.Trace))
+					{
+						_recognizer.LogTrace($"u:{pointUpdated} id:{point.PointerId} pos:{point.Position}");
+					}
+
+					hasUpdate |= pointUpdated;
 				}
 
 				if (hasUpdate)
@@ -102,6 +110,11 @@ namespace Windows.UI.Input
 				{
 					case ManipulationStates.Started:
 						_state = ManipulationStates.Completed;
+
+						if (_recognizer.Log().IsEnabled(LogLevel.Debug))
+						{
+							_recognizer.LogDebug("Manipulation Completed");
+						}
 
 						_recognizer.ManipulationCompleted?.Invoke(
 							_recognizer,
@@ -133,6 +146,12 @@ namespace Windows.UI.Input
 
 			private void NotifyUpdate(bool forceUpdate = false)
 			{
+				if (_recognizer.Log().IsEnabled(LogLevel.Trace))
+				{
+					_recognizer.LogTrace($"_state:{_state} forceUpdate:{forceUpdate}");
+				}
+
+
 				// Note: Make sure to update the _manipulationLast before raising the event, so if an exception is raised
 				//		 or if the manipulation is Completed, the Complete event args can use the updated _manipulationLast.
 
@@ -145,6 +164,11 @@ namespace Windows.UI.Input
 							_state = ManipulationStates.Started;
 							_lastPublished = _currents;
 
+							if (_recognizer.Log().IsEnabled(LogLevel.Debug))
+							{
+								_recognizer.LogDebug("Manipulation Starting");
+							}
+
 							_recognizer.ManipulationStarted?.Invoke(
 								_recognizer,
 								new ManipulationStartedEventArgs(_deviceType, _currents.Center, cumulative));
@@ -153,6 +177,10 @@ namespace Windows.UI.Input
 						break;
 
 					case ManipulationStates.Started when _recognizer.ManipulationUpdated == null:
+						if (_recognizer.Log().IsEnabled(LogLevel.Trace))
+						{
+							_recognizer.LogTrace("Skip raise ManipulationUpdated");
+						}
 						_lastPublished = _currents;
 						break;
 
@@ -163,6 +191,11 @@ namespace Windows.UI.Input
 						if (forceUpdate || IsSignificant(delta))
 						{
 							_lastPublished = _currents;
+
+							if (_recognizer.Log().IsEnabled(LogLevel.Debug))
+							{
+								_recognizer.LogDebug("Manipulation Started");
+							}
 
 							_recognizer.ManipulationUpdated.Invoke(
 								_recognizer,

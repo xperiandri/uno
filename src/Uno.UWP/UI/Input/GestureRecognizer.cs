@@ -5,10 +5,11 @@ using Windows.Foundation;
 using Microsoft.Extensions.Logging;
 using Uno.Extensions;
 using Uno.Logging;
+using System.Runtime.CompilerServices;
 
 namespace Windows.UI.Input
 {
-	public partial class GestureRecognizer 
+	public partial class GestureRecognizer
 	{
 		private readonly ILogger _log;
 		private IDictionary<uint, List<PointerPoint>> _activePointers = new Dictionary<uint, List<PointerPoint>>();
@@ -32,6 +33,13 @@ namespace Windows.UI.Input
 		/// </summary>
 		internal object Owner { get; }
 
+		private void LogDebug(string logMessage, [CallerMemberName] string memberName = null)
+			=> this.Log().Debug($"[{Owner}/{Owner.GetHashCode():X8}] {memberName}: {logMessage}");
+		private void LogTrace(string logMessage, [CallerMemberName] string memberName = null)
+			=> this.Log().Trace($"[{Owner}/{Owner.GetHashCode():X8}] {memberName}: {logMessage}");
+
+		public object OwnerLogString => $"";
+
 		public GestureRecognizer()
 		{
 			_log = this.Log();
@@ -45,6 +53,11 @@ namespace Windows.UI.Input
 
 		public void ProcessDownEvent(PointerPoint value)
 		{
+			if (this.Log().IsEnabled(LogLevel.Debug))
+			{
+				LogDebug($"pId:{value.PointerId}, pos:{value.Position}");
+			}
+
 			if (TryRecognizeMultiTap(value))
 			{
 				// This is how UWP behaves, it will fire the double tap
@@ -70,23 +83,34 @@ namespace Windows.UI.Input
 
 		public void ProcessMoveEvents(IList<PointerPoint> value)
 		{
+			if (this.Log().IsEnabled(LogLevel.Trace))
+			{
+				LogTrace(string.Join("; ", value.Select(v => $"pId:{v.PointerId} pdt:{v.PointerDevice.PointerDeviceType} pos:{v.Position}")));
+			}
+
 			foreach (var point in value)
 			{
 				if (_activePointers.TryGetValue(point.PointerId, out var points))
 				{
 					points.Add(point);
 				}
-				else if (_log.IsEnabled(LogLevel.Information))
+				else if (_log.IsEnabled(LogLevel.Debug))
 				{
 					// info: We might get some PointerMove for mouse even if not pressed!
-					_log.Info("Received a 'Move' for a pointer which was not considered as down. Ignoring event.");
+					LogDebug("Received a 'Move' for a pointer which was not considered as down. Ignoring event.");
 				}
 			}
 
 			_manipulation?.Update(value);
 		}
+
 		public void ProcessUpEvent(PointerPoint value)
 		{
+			if (this.Log().IsEnabled(LogLevel.Debug))
+			{
+				LogDebug($"pId:{value.PointerId}, pos:{value.Position}");
+			}
+
 #if NET461 || __WASM__
 			if (_activePointers.TryGetValue(value.PointerId, out var points))
 			{
@@ -111,6 +135,11 @@ namespace Windows.UI.Input
 
 		public void CompleteGesture()
 		{
+			if (this.Log().IsEnabled(LogLevel.Debug))
+			{
+				LogDebug("");
+			}
+
 			if (!IsActive)
 			{
 				return;
@@ -141,9 +170,9 @@ namespace Windows.UI.Input
 
 			var recognized = TryRecognizeTap(points, pointerUp);
 
-			if (!recognized && _log.IsEnabled(LogLevel.Information))
+			if (!recognized && _log.IsEnabled(LogLevel.Debug))
 			{
-				_log.Info("No gesture recognized");
+				_log.Debug("No gesture recognized");
 			}
 		}
 
@@ -229,6 +258,11 @@ namespace Windows.UI.Input
 			if (IsOutOfTapRange(end.Position, start.Position))
 			{
 				return false;
+			}
+
+			if (this.Log().IsEnabled(LogLevel.Debug))
+			{
+				LogDebug($"Recognized Tap");
 			}
 
 			_lastSingleTap = (startIdentifier, end.Timestamp, end.Position);
