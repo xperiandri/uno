@@ -1,0 +1,1174 @@
+NUnit Console Runner 3.10.0 (.NET 2.0)
+Copyright (c) 2019 Charlie Poole, Rob Prouse
+November 1, 2019 11:55:43 AM
+
+Runtime Environment
+   OS Version: MacOSX 18.7.0.0 
+  CLR Version: 4.0.30319.42000
+
+Test Files
+    /Users/jay2/nv.github/Uno/src/SamplesApp/SamplesApp.UITests/bin/Release/net47/SamplesApp.UITests.dll
+
+Test Filters
+    Where: name = 'DatePickerFlyout_HasContentTest'
+
+=> SamplesApp.UITests.Windows_UI_Xaml_Controls.DatePickerTests.DatePickerTests_Tests.DatePickerFlyout_HasContentTest
+Starting app (True)
+Using AppBundle Path: /Users/jay2/nv.github/Uno/src/SamplesApp/SamplesApp.iOS/bin/iPhoneSimulator/Release/SamplesApp.app
+Full log file: /tmp/screenshots/ios/log-2019-11-01_11-56-02-772.txt
+iOS test running Xamarin.UITest version: 3.0.4
+Skipping IDE integration as important properties are configured. To force IDE integration, add .PreferIdeSettings() to ConfigureApp.
+Artifact folder: /var/folders/lf/x4bsgt3s53s992vr30w384wm0000gr/T/uitest/a-A04B63E2FE4CB90DA3F03233A70BCDEB066D8BB9
+Using cached artifact folder: idevice-tools
+Initializing iOS app on http://127.0.0.1:37265/.
+HTTP GET { Url: { AbsolutePath: "/version", AbsoluteUri: "http://127.0.0.1:37265/version", LocalPath: "/version", Authority: "127.0.0.1:37265", HostNameType: IPv4, IsDefaultPort: False, IsFile: False, IsLoopback: True, PathAndQuery: "/version", Segments: [ "/", "version" ], IsUnc: False, Host: "127.0.0.1", Port: 37265, Query: "", Fragment: "", Scheme: "http", OriginalString: "http://127.0.0.1:37265/version", DnsSafeHost: "127.0.0.1", IdnHost: "127.0.0.1", IsAbsoluteUri: True, UserEscaped: False, UserInfo: "" } }
+GET Complete { StatusCode: 200, Contents: "{"device_family":"iPad","outcome":"SUCCESS","server_port":37265,"simulator":"CoreSimulator 681.5.4 - Device: iPad Pro (12.9-inch) (3rd generation) (FAE49182-D94F-462B-8425-50D36D5918E8) - Runtime: iOS 13.0 (17A577a) - DeviceType: iPad Pro (12.9-inch) (3rd generation)","app_name":"Uno SamplesApp","app_version":"1.0","screen_dimensions":{"height":2732,"bounds":{"y":0,"x":0,"width":1024,"height":1366},"sample":1,"native_bounds":{"y":0,"x":0,"width":2048,"height":2732},"width":2048,"native_scale":2,"bounds_portrait_height":1366,"bounds_portrait_width":1024,"scale":2},"git":{"revision":"e8754b3","remote_origin":"https:\/\/github.com\/calabash\/calabash-ios-server.git","branch":"HEAD"},"device_name":"iPad Pro (12.9-inch) (3rd generation)","4inch":false,"app_id":"com.companyname.SamplesApp","form_factor":"ipad pro 12.9","version":"0.21.8","server_identifier_to_skip":"","short_version_string":"1.0","server_identifier":"e8754b3cd4c478021b7b5f5654606d3a9bc25485","build_date":"2019-16-16 16:21:21 +0200","ios_version":"13.0","iphone_app_emulated_on_ipad":false,"model_identifier":"iPad8,5","app_base_sdk":"iphonesimulator13.1"}" }
+Artifact folder: /var/folders/lf/x4bsgt3s53s992vr30w384wm0000gr/T/uitest/a-A04B63E2FE4CB90DA3F03233A70BCDEB066D8BB9
+Test server version: 0.21.8
+Waiting for element matching Marked("sampleControl").
+304 - HTTP POST http://127.0.0.1:27753/1.0/dismiss-springboard-alerts
+304 - HTTP request succeeded
+304 - HTTP POST complete
+DeviceAgent springboard dismiss alerts response: OK - no alerts
+HTTP POST { Url: { AbsolutePath: "/map", AbsoluteUri: "http://127.0.0.1:37265/map", LocalPath: "/map", Authority: "127.0.0.1:37265", HostNameType: IPv4, IsDefaultPort: False, IsFile: False, IsLoopback: True, PathAndQuery: "/map", Segments: [ "/", "map" ], IsUnc: False, Host: "127.0.0.1", Port: 37265, Query: "", Fragment: "", Scheme: "http", OriginalString: "http://127.0.0.1:37265/map", DnsSafeHost: "127.0.0.1", IdnHost: "127.0.0.1", IsAbsoluteUri: True, UserEscaped: False, UserInfo: "" } }
+POST Complete { StatusCode: OK, StatusDescription: "OK", ResponseHeaders: "Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3000
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+Accept-Ranges: bytes
+Date: Fri, 01 Nov 2019 15:56:03 GMT
+Access-Control-Allow-Origin: *
+", Contents: "{"status_bar_orientation":"down","results":[{"alpha":1,"enabled":true,"id":"sampleControl","visible":1,"frame":{"y":0,"x":0,"width":1024,"height":1366},"accessibilityElement":false,"class":"Uno_UI_Samples_Controls_SampleChooserControl","label":null,"description":"<Uno_UI_Samples_Controls_SampleChooserControl: 0x7fb653c2b340; frame = (0 0; 1024 1366); clipsToBounds = YES; autoresize = W+H; layer = <CALayer: 0x600003329740>>","value":null,"rect":{"y":0,"center_x":512,"center_y":683,"x":0,"width":1024,"height":1366}}],"outcome":"SUCCESS"}" }
+305 - HTTP POST http://127.0.0.1:27753/1.0/dismiss-springboard-alerts
+305 - HTTP request succeeded
+305 - HTTP POST complete
+DeviceAgent springboard dismiss alerts response: OK - no alerts
+HTTP POST { Url: { AbsolutePath: "/map", AbsoluteUri: "http://127.0.0.1:37265/map", LocalPath: "/map", Authority: "127.0.0.1:37265", HostNameType: IPv4, IsDefaultPort: False, IsFile: False, IsLoopback: True, PathAndQuery: "/map", Segments: [ "/", "map" ], IsUnc: False, Host: "127.0.0.1", Port: 37265, Query: "", Fragment: "", Scheme: "http", OriginalString: "http://127.0.0.1:37265/map", DnsSafeHost: "127.0.0.1", IdnHost: "127.0.0.1", IsAbsoluteUri: True, UserEscaped: False, UserInfo: "" } }
+POST Complete { StatusCode: OK, StatusDescription: "OK", ResponseHeaders: "Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3000
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+Accept-Ranges: bytes
+Date: Fri, 01 Nov 2019 15:56:03 GMT
+Access-Control-Allow-Origin: *
+", Contents: "{"status_bar_orientation":"down","results":[{"alpha":1,"enabled":true,"id":"sampleControl","visible":1,"frame":{"y":0,"x":0,"width":1024,"height":1366},"accessibilityElement":false,"class":"Uno_UI_Samples_Controls_SampleChooserControl","label":null,"description":"<Uno_UI_Samples_Controls_SampleChooserControl: 0x7fb653c2b340; frame = (0 0; 1024 1366); clipsToBounds = YES; autoresize = W+H; layer = <CALayer: 0x600003329740>>","value":null,"rect":{"y":0,"center_x":512,"center_y":683,"x":0,"width":1024,"height":1366}}],"outcome":"SUCCESS"}" }
+HTTP POST { Url: { AbsolutePath: "/backdoor", AbsoluteUri: "http://127.0.0.1:37265/backdoor", LocalPath: "/backdoor", Authority: "127.0.0.1:37265", HostNameType: IPv4, IsDefaultPort: False, IsFile: False, IsLoopback: True, PathAndQuery: "/backdoor", Segments: [ "/", "backdoor" ], IsUnc: False, Host: "127.0.0.1", Port: 37265, Query: "", Fragment: "", Scheme: "http", OriginalString: "http://127.0.0.1:37265/backdoor", DnsSafeHost: "127.0.0.1", IdnHost: "127.0.0.1", IsAbsoluteUri: True, UserEscaped: False, UserInfo: "" } }
+POST Complete { StatusCode: OK, StatusDescription: "OK", ResponseHeaders: "Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3000
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+Accept-Ranges: bytes
+Date: Fri, 01 Nov 2019 15:56:04 GMT
+Access-Control-Allow-Origin: *
+", Contents: "{"results":"1","result":"1","outcome":"SUCCESS"}" }
+HTTP POST { Url: { AbsolutePath: "/backdoor", AbsoluteUri: "http://127.0.0.1:37265/backdoor", LocalPath: "/backdoor", Authority: "127.0.0.1:37265", HostNameType: IPv4, IsDefaultPort: False, IsFile: False, IsLoopback: True, PathAndQuery: "/backdoor", Segments: [ "/", "backdoor" ], IsUnc: False, Host: "127.0.0.1", Port: 37265, Query: "", Fragment: "", Scheme: "http", OriginalString: "http://127.0.0.1:37265/backdoor", DnsSafeHost: "127.0.0.1", IdnHost: "127.0.0.1", IsAbsoluteUri: True, UserEscaped: False, UserInfo: "" } }
+POST Complete { StatusCode: OK, StatusDescription: "OK", ResponseHeaders: "Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3000
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+Accept-Ranges: bytes
+Date: Fri, 01 Nov 2019 15:56:04 GMT
+Access-Control-Allow-Origin: *
+", Contents: "{"results":"False","result":"False","outcome":"SUCCESS"}" }
+HTTP POST { Url: { AbsolutePath: "/backdoor", AbsoluteUri: "http://127.0.0.1:37265/backdoor", LocalPath: "/backdoor", Authority: "127.0.0.1:37265", HostNameType: IPv4, IsDefaultPort: False, IsFile: False, IsLoopback: True, PathAndQuery: "/backdoor", Segments: [ "/", "backdoor" ], IsUnc: False, Host: "127.0.0.1", Port: 37265, Query: "", Fragment: "", Scheme: "http", OriginalString: "http://127.0.0.1:37265/backdoor", DnsSafeHost: "127.0.0.1", IdnHost: "127.0.0.1", IsAbsoluteUri: True, UserEscaped: False, UserInfo: "" } }
+POST Complete { StatusCode: OK, StatusDescription: "OK", ResponseHeaders: "Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3000
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+Accept-Ranges: bytes
+Date: Fri, 01 Nov 2019 15:56:04 GMT
+Access-Control-Allow-Origin: *
+", Contents: "{"results":"False","result":"False","outcome":"SUCCESS"}" }
+HTTP POST { Url: { AbsolutePath: "/backdoor", AbsoluteUri: "http://127.0.0.1:37265/backdoor", LocalPath: "/backdoor", Authority: "127.0.0.1:37265", HostNameType: IPv4, IsDefaultPort: False, IsFile: False, IsLoopback: True, PathAndQuery: "/backdoor", Segments: [ "/", "backdoor" ], IsUnc: False, Host: "127.0.0.1", Port: 37265, Query: "", Fragment: "", Scheme: "http", OriginalString: "http://127.0.0.1:37265/backdoor", DnsSafeHost: "127.0.0.1", IdnHost: "127.0.0.1", IsAbsoluteUri: True, UserEscaped: False, UserInfo: "" } }
+POST Complete { StatusCode: OK, StatusDescription: "OK", ResponseHeaders: "Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3000
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+Accept-Ranges: bytes
+Date: Fri, 01 Nov 2019 15:56:04 GMT
+Access-Control-Allow-Origin: *
+", Contents: "{"results":"True","result":"True","outcome":"SUCCESS"}" }
+HTTP POST { Url: { AbsolutePath: "/condition", AbsoluteUri: "http://127.0.0.1:37265/condition", LocalPath: "/condition", Authority: "127.0.0.1:37265", HostNameType: IPv4, IsDefaultPort: False, IsFile: False, IsLoopback: True, PathAndQuery: "/condition", Segments: [ "/", "condition" ], IsUnc: False, Host: "127.0.0.1", Port: 37265, Query: "", Fragment: "", Scheme: "http", OriginalString: "http://127.0.0.1:37265/condition", DnsSafeHost: "127.0.0.1", IdnHost: "127.0.0.1", IsAbsoluteUri: True, UserEscaped: False, UserInfo: "" } }
+POST Complete { StatusCode: OK, StatusDescription: "OK", ResponseHeaders: "Date: Fri, 01 Nov 2019 15:56:04 GMT
+Accept-Ranges: bytes
+Transfer-Encoding: chunked
+", Contents: "{"results":[],"outcome":"SUCCESS"}" }
+HTTP GET BINARY { Url: { AbsolutePath: "/screenshot", AbsoluteUri: "http://127.0.0.1:37265/screenshot", LocalPath: "/screenshot", Authority: "127.0.0.1:37265", HostNameType: IPv4, IsDefaultPort: False, IsFile: False, IsLoopback: True, PathAndQuery: "/screenshot", Segments: [ "/", "screenshot" ], IsUnc: False, Host: "127.0.0.1", Port: 37265, Query: "", Fragment: "", Scheme: "http", OriginalString: "http://127.0.0.1:37265/screenshot", DnsSafeHost: "127.0.0.1", IdnHost: "127.0.0.1", IsAbsoluteUri: True, UserEscaped: False, UserInfo: "" } }
+GET BINARY Complete { FileName: "/Users/jay2/nv.github/Uno/build/screenshot-1.png", FileSize: 132562 }
+Took screenshot. { ElapsedMilliseconds: 264, Path: "/Users/jay2/nv.github/Uno/build/screenshot-1.png", Title: "DatePickerFlyout_HasContentTest_UITests_Shared_Windows_UI_Xaml_Controls_DatePicker_DatePicker_SampleContent" }
+Waiting for element matching Marked("theDatePicker").
+306 - HTTP POST http://127.0.0.1:27753/1.0/dismiss-springboard-alerts
+306 - HTTP request succeeded
+306 - HTTP POST complete
+DeviceAgent springboard dismiss alerts response: OK - no alerts
+HTTP POST { Url: { AbsolutePath: "/map", AbsoluteUri: "http://127.0.0.1:37265/map", LocalPath: "/map", Authority: "127.0.0.1:37265", HostNameType: IPv4, IsDefaultPort: False, IsFile: False, IsLoopback: True, PathAndQuery: "/map", Segments: [ "/", "map" ], IsUnc: False, Host: "127.0.0.1", Port: 37265, Query: "", Fragment: "", Scheme: "http", OriginalString: "http://127.0.0.1:37265/map", DnsSafeHost: "127.0.0.1", IdnHost: "127.0.0.1", IsAbsoluteUri: True, UserEscaped: False, UserInfo: "" } }
+POST Complete { StatusCode: OK, StatusDescription: "OK", ResponseHeaders: "Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3000
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+Accept-Ranges: bytes
+Date: Fri, 01 Nov 2019 15:56:05 GMT
+Access-Control-Allow-Origin: *
+", Contents: "{"status_bar_orientation":"down","results":[{"alpha":1,"enabled":true,"id":"theDatePicker","visible":1,"frame":{"y":10,"x":170,"width":664,"height":20},"accessibilityElement":true,"class":"Windows_UI_Xaml_Controls_DatePicker","label":"","description":"<Windows_UI_Xaml_Controls_DatePicker: 0x7fb653f39ff0; frame = (170 10; 664 20); clipsToBounds = YES; layer = <CALayer: 0x6000030a07e0>>","value":null,"rect":{"y":94,"center_x":512,"center_y":104,"x":180,"width":664,"height":20}}],"outcome":"SUCCESS"}" }
+307 - HTTP POST http://127.0.0.1:27753/1.0/dismiss-springboard-alerts
+307 - HTTP request succeeded
+307 - HTTP POST complete
+DeviceAgent springboard dismiss alerts response: OK - no alerts
+HTTP POST { Url: { AbsolutePath: "/map", AbsoluteUri: "http://127.0.0.1:37265/map", LocalPath: "/map", Authority: "127.0.0.1:37265", HostNameType: IPv4, IsDefaultPort: False, IsFile: False, IsLoopback: True, PathAndQuery: "/map", Segments: [ "/", "map" ], IsUnc: False, Host: "127.0.0.1", Port: 37265, Query: "", Fragment: "", Scheme: "http", OriginalString: "http://127.0.0.1:37265/map", DnsSafeHost: "127.0.0.1", IdnHost: "127.0.0.1", IsAbsoluteUri: True, UserEscaped: False, UserInfo: "" } }
+POST Complete { StatusCode: OK, StatusDescription: "OK", ResponseHeaders: "Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3000
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+Accept-Ranges: bytes
+Date: Fri, 01 Nov 2019 15:56:05 GMT
+Access-Control-Allow-Origin: *
+", Contents: "{"status_bar_orientation":"down","results":[{"alpha":1,"enabled":true,"id":"theDatePicker","visible":1,"frame":{"y":10,"x":170,"width":664,"height":20},"accessibilityElement":true,"class":"Windows_UI_Xaml_Controls_DatePicker","label":"","description":"<Windows_UI_Xaml_Controls_DatePicker: 0x7fb653f39ff0; frame = (170 10; 664 20); clipsToBounds = YES; layer = <CALayer: 0x6000030a07e0>>","value":null,"rect":{"y":94,"center_x":512,"center_y":104,"x":180,"width":664,"height":20}}],"outcome":"SUCCESS"}" }
+HTTP POST { Url: { AbsolutePath: "/condition", AbsoluteUri: "http://127.0.0.1:37265/condition", LocalPath: "/condition", Authority: "127.0.0.1:37265", HostNameType: IPv4, IsDefaultPort: False, IsFile: False, IsLoopback: True, PathAndQuery: "/condition", Segments: [ "/", "condition" ], IsUnc: False, Host: "127.0.0.1", Port: 37265, Query: "", Fragment: "", Scheme: "http", OriginalString: "http://127.0.0.1:37265/condition", DnsSafeHost: "127.0.0.1", IdnHost: "127.0.0.1", IsAbsoluteUri: True, UserEscaped: False, UserInfo: "" } }
+POST Complete { StatusCode: OK, StatusDescription: "OK", ResponseHeaders: "Date: Fri, 01 Nov 2019 15:56:06 GMT
+Accept-Ranges: bytes
+Transfer-Encoding: chunked
+", Contents: "{"results":[],"outcome":"SUCCESS"}" }
+308 - HTTP POST http://127.0.0.1:27753/1.0/dismiss-springboard-alerts
+308 - HTTP request succeeded
+308 - HTTP POST complete
+DeviceAgent springboard dismiss alerts response: OK - no alerts
+HTTP POST { Url: { AbsolutePath: "/map", AbsoluteUri: "http://127.0.0.1:37265/map", LocalPath: "/map", Authority: "127.0.0.1:37265", HostNameType: IPv4, IsDefaultPort: False, IsFile: False, IsLoopback: True, PathAndQuery: "/map", Segments: [ "/", "map" ], IsUnc: False, Host: "127.0.0.1", Port: 37265, Query: "", Fragment: "", Scheme: "http", OriginalString: "http://127.0.0.1:37265/map", DnsSafeHost: "127.0.0.1", IdnHost: "127.0.0.1", IsAbsoluteUri: True, UserEscaped: False, UserInfo: "" } }
+POST Complete { StatusCode: OK, StatusDescription: "OK", ResponseHeaders: "Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3000
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+Accept-Ranges: bytes
+Date: Fri, 01 Nov 2019 15:56:06 GMT
+Access-Control-Allow-Origin: *
+", Contents: "{"status_bar_orientation":"down","results":[{"alpha":1,"enabled":true,"id":"theDatePicker","visible":1,"frame":{"y":10,"x":170,"width":664,"height":20},"accessibilityElement":true,"class":"Windows_UI_Xaml_Controls_DatePicker","label":"","description":"<Windows_UI_Xaml_Controls_DatePicker: 0x7fb653f39ff0; frame = (170 10; 664 20); clipsToBounds = YES; layer = <CALayer: 0x6000030a07e0>>","value":null,"rect":{"y":94,"center_x":512,"center_y":104,"x":180,"width":664,"height":20}}],"outcome":"SUCCESS"}" }
+309 - HTTP POST http://127.0.0.1:27753/1.0/dismiss-springboard-alerts
+309 - HTTP request succeeded
+309 - HTTP POST complete
+DeviceAgent springboard dismiss alerts response: OK - no alerts
+HTTP POST { Url: { AbsolutePath: "/map", AbsoluteUri: "http://127.0.0.1:37265/map", LocalPath: "/map", Authority: "127.0.0.1:37265", HostNameType: IPv4, IsDefaultPort: False, IsFile: False, IsLoopback: True, PathAndQuery: "/map", Segments: [ "/", "map" ], IsUnc: False, Host: "127.0.0.1", Port: 37265, Query: "", Fragment: "", Scheme: "http", OriginalString: "http://127.0.0.1:37265/map", DnsSafeHost: "127.0.0.1", IdnHost: "127.0.0.1", IsAbsoluteUri: True, UserEscaped: False, UserInfo: "" } }
+POST Complete { StatusCode: OK, StatusDescription: "OK", ResponseHeaders: "Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3000
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+Accept-Ranges: bytes
+Date: Fri, 01 Nov 2019 15:56:06 GMT
+Access-Control-Allow-Origin: *
+", Contents: "{"status_bar_orientation":"down","results":[{"alpha":1,"enabled":true,"id":"theDatePicker","visible":1,"frame":{"y":10,"x":170,"width":664,"height":20},"accessibilityElement":true,"class":"Windows_UI_Xaml_Controls_DatePicker","label":"","description":"<Windows_UI_Xaml_Controls_DatePicker: 0x7fb653f39ff0; frame = (170 10; 664 20); clipsToBounds = YES; layer = <CALayer: 0x6000030a07e0>>","value":null,"rect":{"y":94,"center_x":512,"center_y":104,"x":180,"width":664,"height":20}}],"outcome":"SUCCESS"}" }
+Tapping element matching Marked("theDatePicker") at coordinates [ 512, 104 ].
+310 - HTTP POST http://127.0.0.1:27753/1.0/gesture { specifiers: { coordinate: { x: 512, y: 104 } }, gesture: "touch", options:  }
+310 - HTTP request succeeded
+310 - HTTP POST complete
+DeviceAgent touch response: OK - success
+HTTP POST { Url: { AbsolutePath: "/map", AbsoluteUri: "http://127.0.0.1:37265/map", LocalPath: "/map", Authority: "127.0.0.1:37265", HostNameType: IPv4, IsDefaultPort: False, IsFile: False, IsLoopback: True, PathAndQuery: "/map", Segments: [ "/", "map" ], IsUnc: False, Host: "127.0.0.1", Port: 37265, Query: "", Fragment: "", Scheme: "http", OriginalString: "http://127.0.0.1:37265/map", DnsSafeHost: "127.0.0.1", IdnHost: "127.0.0.1", IsAbsoluteUri: True, UserEscaped: False, UserInfo: "" } }
+POST Complete { StatusCode: OK, StatusDescription: "OK", ResponseHeaders: "Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3000
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+Accept-Ranges: bytes
+Date: Fri, 01 Nov 2019 15:56:10 GMT
+Access-Control-Allow-Origin: *
+", Contents: "{"status_bar_orientation":"down","results":["Windows.UI.Xaml.Controls.DatePickerSelector"],"outcome":"SUCCESS"}" }
+Query for Class("Windows_UI_Xaml_Controls_DatePickerFlyoutPresenter").Invoke("getDependencyPropertyValue", "Content").Value<Object>() gave 1 results.
+2: Windows.UI.Xaml.Controls.DatePickerSelector
+HTTP POST { Url: { AbsolutePath: "/map", AbsoluteUri: "http://127.0.0.1:37265/map", LocalPath: "/map", Authority: "127.0.0.1:37265", HostNameType: IPv4, IsDefaultPort: False, IsFile: False, IsLoopback: True, PathAndQuery: "/map", Segments: [ "/", "map" ], IsUnc: False, Host: "127.0.0.1", Port: 37265, Query: "", Fragment: "", Scheme: "http", OriginalString: "http://127.0.0.1:37265/map", DnsSafeHost: "127.0.0.1", IdnHost: "127.0.0.1", IsAbsoluteUri: True, UserEscaped: False, UserInfo: "" } }
+POST Complete { StatusCode: OK, StatusDescription: "OK", ResponseHeaders: "Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3000
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+Accept-Ranges: bytes
+Date: Fri, 01 Nov 2019 15:56:10 GMT
+Access-Control-Allow-Origin: *
+", Contents: "{"status_bar_orientation":"down","results":["Windows.UI.Xaml.Controls.DatePickerSelector"],"outcome":"SUCCESS"}" }
+Query for Class("Windows_UI_Xaml_Controls_DatePickerFlyoutPresenter").Invoke("getDependencyPropertyValue", "Content").Value<Object>() gave 1 results.
+=> SamplesApp.UITests.Windows_UI_Xaml_Controls.DatePickerTests.DatePickerTests_Tests
+Starting app (False)
+WARNING: Detected System.Net.Http.dll in bin folder. This may be due to this known mono issue: https://bugzilla.xamarin.com/show_bug.cgi?id=60315#c2 - we recommend you delete this dll before running tests to avoid test failures.
+Using AppBundle Path: /Users/jay2/nv.github/Uno/src/SamplesApp/SamplesApp.iOS/bin/iPhoneSimulator/Release/SamplesApp.app
+Full log file: /tmp/screenshots/ios/log-2019-11-01_11-55-44-908.txt
+iOS test running Xamarin.UITest version: 3.0.4
+Skipping IDE integration as important properties are configured. To force IDE integration, add .PreferIdeSettings() to ConfigureApp.
+Artifact folder: /var/folders/lf/x4bsgt3s53s992vr30w384wm0000gr/T/uitest/a-A04B63E2FE4CB90DA3F03233A70BCDEB066D8BB9
+Using cached artifact folder: idevice-tools
+Running command. { Path: "plutil", Arguments: "-convert xml1 -o - "/Users/jay2/Library/Preferences/Xamarin/Settings.plist"", CurrentDirectory: "/Users/jay2/nv.github/Uno/build" }
+Artifact folder: /var/folders/lf/x4bsgt3s53s992vr30w384wm0000gr/T/uitest/a-83ED3933FAAA32DA60A203703035FEB61DF2CA53
+Running command. { Path: "plutil", Arguments: "-convert xml1 -o - "/Users/jay2/nv.github/Uno/src/SamplesApp/SamplesApp.iOS/bin/iPhoneSimulator/Release/SamplesApp.app/Info.plist"", CurrentDirectory: "/Users/jay2/nv.github/Uno/build" }
+Running command. { Path: "xcrun", Arguments: "otool-classic -hv -arch all "/Users/jay2/nv.github/Uno/src/SamplesApp/SamplesApp.iOS/bin/iPhoneSimulator/Release/SamplesApp.app/Uno.Foundation.dll.config"", CurrentDirectory: "/Users/jay2/nv.github/Uno/build" }
+Running command. { Path: "xcrun", Arguments: "otool-classic -hv -arch all "/Users/jay2/nv.github/Uno/src/SamplesApp/SamplesApp.iOS/bin/iPhoneSimulator/Release/SamplesApp.app/Uno.UI.RuntimeTests.dll.config"", CurrentDirectory: "/Users/jay2/nv.github/Uno/build" }
+Running command. { Path: "xcrun", Arguments: "otool-classic -hv -arch all "/Users/jay2/nv.github/Uno/src/SamplesApp/SamplesApp.iOS/bin/iPhoneSimulator/Release/SamplesApp.app/Uno.UI.Toolkit.dll.config"", CurrentDirectory: "/Users/jay2/nv.github/Uno/build" }
+Running command. { Path: "xcrun", Arguments: "otool-classic -hv -arch all "/Users/jay2/nv.github/Uno/src/SamplesApp/SamplesApp.iOS/bin/iPhoneSimulator/Release/SamplesApp.app/Uno.UI.Maps.dll.config"", CurrentDirectory: "/Users/jay2/nv.github/Uno/build" }
+Running command. { Path: "xcrun", Arguments: "otool-classic -hv -arch all "/Users/jay2/nv.github/Uno/src/SamplesApp/SamplesApp.iOS/bin/iPhoneSimulator/Release/SamplesApp.app/SamplesApp.exe"", CurrentDirectory: "/Users/jay2/nv.github/Uno/build" }
+Running command. { Path: "xcrun", Arguments: "otool-classic -hv -arch all "/Users/jay2/nv.github/Uno/src/SamplesApp/SamplesApp.iOS/bin/iPhoneSimulator/Release/SamplesApp.app/SamplesApp"", CurrentDirectory: "/Users/jay2/nv.github/Uno/build" }
+Running command. { Path: "xcrun", Arguments: "strings "/Users/jay2/nv.github/Uno/src/SamplesApp/SamplesApp.iOS/bin/iPhoneSimulator/Release/SamplesApp.app/SamplesApp"", CurrentDirectory: "/Users/jay2/nv.github/Uno/build" }
+Starting app bundle.  { AppBundle: "/Users/jay2/nv.github/Uno/src/SamplesApp/SamplesApp.iOS/bin/iPhoneSimulator/Release/SamplesApp.app" }
+Running command. { Path: "ps", Arguments: "-xww -o pid,user,args", CurrentDirectory: "/Users/jay2/nv.github/Uno/build" }
+Running command. { Path: "ps", Arguments: "-xww -o pid,user,args", CurrentDirectory: "/Users/jay2/nv.github/Uno/build" }
+Running command. { Path: "/usr/bin/xcrun", Arguments: "simctl help 2>&1", CurrentDirectory: "/Users/jay2/nv.github/Uno/build" }
+Running command. { Path: "/usr/bin/xcrun", Arguments: "simctl list devices --json", CurrentDirectory: "/Users/jay2/nv.github/Uno/build" }
+Running command. { Path: "ps", Arguments: "-xww -o pid,user,args", CurrentDirectory: "/Users/jay2/nv.github/Uno/build" }
+Running command. { Path: "plutil", Arguments: "-convert xml1 -o - "/Users/jay2/nv.github/Uno/src/SamplesApp/SamplesApp.iOS/bin/iPhoneSimulator/Release/SamplesApp.app/Info.plist"", CurrentDirectory: "/Users/jay2/nv.github/Uno/build" }
+Running command. { Path: "plutil", Arguments: "-convert xml1 -o - "/Users/jay2/Library/Developer/CoreSimulator/Devices/FAE49182-D94F-462B-8425-50D36D5918E8/device.plist"", CurrentDirectory: "/Users/jay2/nv.github/Uno/build" }
+Running command. { Path: "plutil", Arguments: "-convert xml1 -o - "/Users/jay2/Library/Developer/CoreSimulator/Devices/FAE49182-D94F-462B-8425-50D36D5918E8/data/Containers/Bundle/Application/B19D04B2-61B1-4B26-9186-E6C027A30E77/SamplesApp.app/Info.plist"", CurrentDirectory: "/Users/jay2/nv.github/Uno/build" }
+Running command. { Path: "plutil", Arguments: "-convert xml1 -o - "/Users/jay2/Library/Developer/CoreSimulator/Devices/FAE49182-D94F-462B-8425-50D36D5918E8/data/Containers/Data/Application/419E08BE-3922-4239-994F-CA7DA0C41915/.com.apple.mobile_container_manager.metadata.plist"", CurrentDirectory: "/Users/jay2/nv.github/Uno/build" }
+Sim check: App is up to date.
+Running command. { Path: "plutil", Arguments: "-convert xml1 -o - "/Users/jay2/Library/Developer/CoreSimulator/Devices/FAE49182-D94F-462B-8425-50D36D5918E8/data/Library/Preferences/com.apple.Preferences.plist"", CurrentDirectory: "/Users/jay2/nv.github/Uno/build" }
+Running command. { Path: "/usr/libexec/PlistBuddy", Arguments: "-c "Set :AutomaticMinimizationEnabled 0" /Users/jay2/Library/Developer/CoreSimulator/Devices/FAE49182-D94F-462B-8425-50D36D5918E8/data/Library/Preferences/com.apple.Preferences.plist", CurrentDirectory: "/Users/jay2/nv.github/Uno/build" }
+1 - Launching simulator if not already running
+Running: /var/folders/lf/x4bsgt3s53s992vr30w384wm0000gr/T/xdb/DeviceAgent.iOS.Dependencies/42d07e9bfef833f40c0ad2b89bf48b10/bin/iOSDeviceManager launch-simulator -d FAE49182-D94F-462B-8425-50D36D5918E8
+Exit code '0' received from '/var/folders/lf/x4bsgt3s53s992vr30w384wm0000gr/T/xdb/DeviceAgent.iOS.Dependencies/42d07e9bfef833f40c0ad2b89bf48b10/bin/iOSDeviceManager launch-simulator -d FAE49182-D94F-462B-8425-50D36D5918E8'
+1 - InstallApp:
+    pathToBundle: /Users/jay2/nv.github/Uno/src/SamplesApp/SamplesApp.iOS/bin/iPhoneSimulator/Release/SamplesApp.app
+    deviceId: FAE49182-D94F-462B-8425-50D36D5918E8
+Running: /var/folders/lf/x4bsgt3s53s992vr30w384wm0000gr/T/xdb/DeviceAgent.iOS.Dependencies/42d07e9bfef833f40c0ad2b89bf48b10/bin/iOSDeviceManager install "/Users/jay2/nv.github/Uno/src/SamplesApp/SamplesApp.iOS/bin/iPhoneSimulator/Release/SamplesApp.app" -d FAE49182-D94F-462B-8425-50D36D5918E8
+Exit code '0' received from '/var/folders/lf/x4bsgt3s53s992vr30w384wm0000gr/T/xdb/DeviceAgent.iOS.Dependencies/42d07e9bfef833f40c0ad2b89bf48b10/bin/iOSDeviceManager install "/Users/jay2/nv.github/Uno/src/SamplesApp/SamplesApp.iOS/bin/iPhoneSimulator/Release/SamplesApp.app" -d FAE49182-D94F-462B-8425-50D36D5918E8'
+Running: /var/folders/lf/x4bsgt3s53s992vr30w384wm0000gr/T/xdb/DeviceAgent.iOS.Dependencies/42d07e9bfef833f40c0ad2b89bf48b10/bin/iOSDeviceManager is-installed /Users/jay2/nv.github/Uno/src/SamplesApp/SamplesApp.iOS/bin/iPhoneSimulator/Release/SamplesApp.app -d FAE49182-D94F-462B-8425-50D36D5918E8
+Exit code '0' received from '/var/folders/lf/x4bsgt3s53s992vr30w384wm0000gr/T/xdb/DeviceAgent.iOS.Dependencies/42d07e9bfef833f40c0ad2b89bf48b10/bin/iOSDeviceManager is-installed /Users/jay2/nv.github/Uno/src/SamplesApp/SamplesApp.iOS/bin/iPhoneSimulator/Release/SamplesApp.app -d FAE49182-D94F-462B-8425-50D36D5918E8'
+2 - LaunchTestAsync:
+    deviceId: FAE49182-D94F-462B-8425-50D36D5918E8
+3 - HTTP GET http://127.0.0.1:27753/1.0/version
+3 - HTTP request succeeded
+3 - HTTP GET complete
+DeviceAgent '1572076741' not found, launching
+4 - HTTP DELETE http://127.0.0.1:27753/1.0/session
+4 - HTTP request succeeded
+4 - HTTP DELETE complete
+DeviceAgent delete session response: OK - 
+5 - HTTP POST http://127.0.0.1:27753/1.0/shutdown
+5 - HTTP request succeeded
+5 - HTTP POST complete
+DeviceAgent shutdown response: OK - Goodbye.
+6 - HTTP GET http://127.0.0.1:27753/1.0/ping
+6 - HTTP request succeeded
+6 - HTTP GET complete
+7 - HTTP GET http://127.0.0.1:27753/1.0/ping
+7 - HTTP request succeeded
+7 - HTTP GET complete
+8 - HTTP GET http://127.0.0.1:27753/1.0/ping
+8 - HTTP request succeeded
+8 - HTTP GET complete
+9 - HTTP GET http://127.0.0.1:27753/1.0/ping
+9 - HTTP request succeeded
+9 - HTTP GET complete
+10 - HTTP GET http://127.0.0.1:27753/1.0/ping
+10 - HTTP request succeeded
+10 - HTTP GET complete
+11 - HTTP GET http://127.0.0.1:27753/1.0/ping
+11 - HTTP request succeeded
+11 - HTTP GET complete
+12 - HTTP GET http://127.0.0.1:27753/1.0/ping
+12 - HTTP request succeeded
+12 - HTTP GET complete
+13 - HTTP GET http://127.0.0.1:27753/1.0/ping
+13 - HTTP request succeeded
+13 - HTTP GET complete
+14 - HTTP GET http://127.0.0.1:27753/1.0/ping
+14 - HTTP request succeeded
+14 - HTTP GET complete
+15 - HTTP GET http://127.0.0.1:27753/1.0/ping
+15 - HTTP request succeeded
+15 - HTTP GET complete
+16 - HTTP GET http://127.0.0.1:27753/1.0/ping
+16 - HTTP request succeeded
+16 - HTTP GET complete
+17 - HTTP GET http://127.0.0.1:27753/1.0/ping
+17 - HTTP request succeeded
+17 - HTTP GET complete
+18 - HTTP GET http://127.0.0.1:27753/1.0/ping
+18 - HTTP request succeeded
+18 - HTTP GET complete
+19 - HTTP GET http://127.0.0.1:27753/1.0/ping
+19 - HTTP request succeeded
+19 - HTTP GET complete
+20 - HTTP GET http://127.0.0.1:27753/1.0/ping
+20 - HTTP request succeeded
+20 - HTTP GET complete
+21 - HTTP GET http://127.0.0.1:27753/1.0/ping
+21 - HTTP request succeeded
+21 - HTTP GET complete
+22 - HTTP GET http://127.0.0.1:27753/1.0/ping
+22 - HTTP request succeeded
+22 - HTTP GET complete
+23 - HTTP GET http://127.0.0.1:27753/1.0/ping
+23 - HTTP request succeeded
+23 - HTTP GET complete
+24 - HTTP GET http://127.0.0.1:27753/1.0/ping
+24 - HTTP request succeeded
+24 - HTTP GET complete
+25 - HTTP GET http://127.0.0.1:27753/1.0/ping
+25 - HTTP request succeeded
+25 - HTTP GET complete
+26 - HTTP GET http://127.0.0.1:27753/1.0/ping
+26 - HTTP request succeeded
+26 - HTTP GET complete
+27 - HTTP GET http://127.0.0.1:27753/1.0/ping
+27 - HTTP request succeeded
+27 - HTTP GET complete
+28 - HTTP GET http://127.0.0.1:27753/1.0/ping
+28 - HTTP request succeeded
+28 - HTTP GET complete
+29 - HTTP GET http://127.0.0.1:27753/1.0/ping
+29 - HTTP request succeeded
+29 - HTTP GET complete
+30 - HTTP GET http://127.0.0.1:27753/1.0/ping
+30 - HTTP request succeeded
+30 - HTTP GET complete
+31 - HTTP GET http://127.0.0.1:27753/1.0/ping
+31 - HTTP request succeeded
+31 - HTTP GET complete
+32 - HTTP GET http://127.0.0.1:27753/1.0/ping
+32 - HTTP request succeeded
+32 - HTTP GET complete
+33 - HTTP GET http://127.0.0.1:27753/1.0/ping
+33 - HTTP request succeeded
+33 - HTTP GET complete
+34 - HTTP GET http://127.0.0.1:27753/1.0/ping
+34 - HTTP request succeeded
+34 - HTTP GET complete
+35 - HTTP GET http://127.0.0.1:27753/1.0/ping
+35 - HTTP request succeeded
+35 - HTTP GET complete
+36 - HTTP GET http://127.0.0.1:27753/1.0/ping
+36 - HTTP request succeeded
+36 - HTTP GET complete
+37 - HTTP GET http://127.0.0.1:27753/1.0/ping
+37 - HTTP request succeeded
+37 - HTTP GET complete
+38 - HTTP GET http://127.0.0.1:27753/1.0/ping
+38 - HTTP request succeeded
+38 - HTTP GET complete
+39 - HTTP GET http://127.0.0.1:27753/1.0/ping
+39 - HTTP request succeeded
+39 - HTTP GET complete
+40 - HTTP GET http://127.0.0.1:27753/1.0/ping
+40 - HTTP request succeeded
+40 - HTTP GET complete
+41 - HTTP GET http://127.0.0.1:27753/1.0/ping
+41 - HTTP request succeeded
+41 - HTTP GET complete
+42 - HTTP GET http://127.0.0.1:27753/1.0/ping
+42 - HTTP request succeeded
+42 - HTTP GET complete
+43 - HTTP GET http://127.0.0.1:27753/1.0/ping
+43 - HTTP request succeeded
+43 - HTTP GET complete
+44 - HTTP GET http://127.0.0.1:27753/1.0/ping
+44 - HTTP request succeeded
+44 - HTTP GET complete
+45 - HTTP GET http://127.0.0.1:27753/1.0/ping
+45 - HTTP request succeeded
+45 - HTTP GET complete
+46 - HTTP GET http://127.0.0.1:27753/1.0/ping
+46 - HTTP request succeeded
+46 - HTTP GET complete
+47 - HTTP GET http://127.0.0.1:27753/1.0/ping
+47 - HTTP request succeeded
+47 - HTTP GET complete
+48 - HTTP GET http://127.0.0.1:27753/1.0/ping
+48 - HTTP request succeeded
+48 - HTTP GET complete
+49 - HTTP GET http://127.0.0.1:27753/1.0/ping
+49 - HTTP request succeeded
+49 - HTTP GET complete
+50 - HTTP GET http://127.0.0.1:27753/1.0/ping
+50 - HTTP request succeeded
+50 - HTTP GET complete
+51 - HTTP GET http://127.0.0.1:27753/1.0/ping
+51 - HTTP request succeeded
+51 - HTTP GET complete
+52 - HTTP GET http://127.0.0.1:27753/1.0/ping
+52 - HTTP request succeeded
+52 - HTTP GET complete
+53 - HTTP GET http://127.0.0.1:27753/1.0/ping
+53 - HTTP request succeeded
+53 - HTTP GET complete
+54 - HTTP GET http://127.0.0.1:27753/1.0/ping
+54 - HTTP request succeeded
+54 - HTTP GET complete
+55 - HTTP GET http://127.0.0.1:27753/1.0/ping
+55 - HTTP request succeeded
+55 - HTTP GET complete
+56 - HTTP GET http://127.0.0.1:27753/1.0/ping
+56 - HTTP request succeeded
+56 - HTTP GET complete
+57 - HTTP GET http://127.0.0.1:27753/1.0/ping
+57 - HTTP request succeeded
+57 - HTTP GET complete
+58 - HTTP GET http://127.0.0.1:27753/1.0/ping
+58 - HTTP request succeeded
+58 - HTTP GET complete
+59 - HTTP GET http://127.0.0.1:27753/1.0/ping
+59 - HTTP request succeeded
+59 - HTTP GET complete
+60 - HTTP GET http://127.0.0.1:27753/1.0/ping
+60 - HTTP request succeeded
+60 - HTTP GET complete
+61 - HTTP GET http://127.0.0.1:27753/1.0/ping
+61 - HTTP request succeeded
+61 - HTTP GET complete
+62 - HTTP GET http://127.0.0.1:27753/1.0/ping
+62 - HTTP request succeeded
+62 - HTTP GET complete
+63 - HTTP GET http://127.0.0.1:27753/1.0/ping
+63 - HTTP request succeeded
+63 - HTTP GET complete
+64 - HTTP GET http://127.0.0.1:27753/1.0/ping
+64 - HTTP request succeeded
+64 - HTTP GET complete
+65 - HTTP GET http://127.0.0.1:27753/1.0/ping
+65 - HTTP request succeeded
+65 - HTTP GET complete
+66 - HTTP GET http://127.0.0.1:27753/1.0/ping
+66 - HTTP request succeeded
+66 - HTTP GET complete
+67 - HTTP GET http://127.0.0.1:27753/1.0/ping
+67 - HTTP request succeeded
+67 - HTTP GET complete
+68 - HTTP GET http://127.0.0.1:27753/1.0/ping
+68 - HTTP request succeeded
+68 - HTTP GET complete
+69 - HTTP GET http://127.0.0.1:27753/1.0/ping
+69 - HTTP request succeeded
+69 - HTTP GET complete
+70 - HTTP GET http://127.0.0.1:27753/1.0/ping
+70 - HTTP request succeeded
+70 - HTTP GET complete
+71 - HTTP GET http://127.0.0.1:27753/1.0/ping
+71 - HTTP request succeeded
+71 - HTTP GET complete
+72 - HTTP GET http://127.0.0.1:27753/1.0/ping
+72 - HTTP request succeeded
+72 - HTTP GET complete
+73 - HTTP GET http://127.0.0.1:27753/1.0/ping
+73 - HTTP request succeeded
+73 - HTTP GET complete
+74 - HTTP GET http://127.0.0.1:27753/1.0/ping
+74 - HTTP request succeeded
+74 - HTTP GET complete
+75 - HTTP GET http://127.0.0.1:27753/1.0/ping
+75 - HTTP request succeeded
+75 - HTTP GET complete
+76 - HTTP GET http://127.0.0.1:27753/1.0/ping
+76 - HTTP request succeeded
+76 - HTTP GET complete
+77 - HTTP GET http://127.0.0.1:27753/1.0/ping
+77 - HTTP request succeeded
+77 - HTTP GET complete
+78 - HTTP GET http://127.0.0.1:27753/1.0/ping
+78 - HTTP request succeeded
+78 - HTTP GET complete
+79 - HTTP GET http://127.0.0.1:27753/1.0/ping
+79 - HTTP request succeeded
+79 - HTTP GET complete
+80 - HTTP GET http://127.0.0.1:27753/1.0/ping
+80 - HTTP request succeeded
+80 - HTTP GET complete
+81 - HTTP GET http://127.0.0.1:27753/1.0/ping
+81 - HTTP request succeeded
+81 - HTTP GET complete
+82 - HTTP GET http://127.0.0.1:27753/1.0/ping
+82 - HTTP request succeeded
+82 - HTTP GET complete
+83 - HTTP GET http://127.0.0.1:27753/1.0/ping
+83 - HTTP request succeeded
+83 - HTTP GET complete
+84 - HTTP GET http://127.0.0.1:27753/1.0/ping
+84 - HTTP request succeeded
+84 - HTTP GET complete
+85 - HTTP GET http://127.0.0.1:27753/1.0/ping
+85 - HTTP request succeeded
+85 - HTTP GET complete
+86 - HTTP GET http://127.0.0.1:27753/1.0/ping
+86 - HTTP request succeeded
+86 - HTTP GET complete
+87 - HTTP GET http://127.0.0.1:27753/1.0/ping
+87 - HTTP request succeeded
+87 - HTTP GET complete
+88 - HTTP GET http://127.0.0.1:27753/1.0/ping
+88 - HTTP request succeeded
+88 - HTTP GET complete
+89 - HTTP GET http://127.0.0.1:27753/1.0/ping
+89 - HTTP request succeeded
+89 - HTTP GET complete
+90 - HTTP GET http://127.0.0.1:27753/1.0/ping
+90 - HTTP request succeeded
+90 - HTTP GET complete
+91 - HTTP GET http://127.0.0.1:27753/1.0/ping
+91 - HTTP request succeeded
+91 - HTTP GET complete
+92 - HTTP GET http://127.0.0.1:27753/1.0/ping
+92 - HTTP request succeeded
+92 - HTTP GET complete
+93 - HTTP GET http://127.0.0.1:27753/1.0/ping
+93 - HTTP request succeeded
+93 - HTTP GET complete
+94 - HTTP GET http://127.0.0.1:27753/1.0/ping
+94 - HTTP request succeeded
+94 - HTTP GET complete
+95 - HTTP GET http://127.0.0.1:27753/1.0/ping
+95 - HTTP request succeeded
+95 - HTTP GET complete
+96 - HTTP GET http://127.0.0.1:27753/1.0/ping
+96 - HTTP request succeeded
+96 - HTTP GET complete
+97 - HTTP GET http://127.0.0.1:27753/1.0/ping
+97 - HTTP request succeeded
+97 - HTTP GET complete
+98 - HTTP GET http://127.0.0.1:27753/1.0/ping
+98 - HTTP request succeeded
+98 - HTTP GET complete
+99 - HTTP GET http://127.0.0.1:27753/1.0/ping
+99 - HTTP request succeeded
+99 - HTTP GET complete
+100 - HTTP GET http://127.0.0.1:27753/1.0/ping
+100 - HTTP request succeeded
+100 - HTTP GET complete
+101 - HTTP GET http://127.0.0.1:27753/1.0/ping
+101 - HTTP request succeeded
+101 - HTTP GET complete
+102 - HTTP GET http://127.0.0.1:27753/1.0/ping
+102 - HTTP request succeeded
+102 - HTTP GET complete
+103 - HTTP GET http://127.0.0.1:27753/1.0/ping
+103 - HTTP request succeeded
+103 - HTTP GET complete
+104 - HTTP GET http://127.0.0.1:27753/1.0/ping
+104 - HTTP request succeeded
+104 - HTTP GET complete
+105 - HTTP GET http://127.0.0.1:27753/1.0/ping
+105 - HTTP request succeeded
+105 - HTTP GET complete
+106 - HTTP GET http://127.0.0.1:27753/1.0/ping
+106 - HTTP request succeeded
+106 - HTTP GET complete
+107 - HTTP GET http://127.0.0.1:27753/1.0/ping
+107 - HTTP request succeeded
+107 - HTTP GET complete
+108 - HTTP GET http://127.0.0.1:27753/1.0/ping
+108 - HTTP request succeeded
+108 - HTTP GET complete
+109 - HTTP GET http://127.0.0.1:27753/1.0/ping
+109 - HTTP request succeeded
+109 - HTTP GET complete
+110 - HTTP GET http://127.0.0.1:27753/1.0/ping
+110 - HTTP request succeeded
+110 - HTTP GET complete
+111 - HTTP GET http://127.0.0.1:27753/1.0/ping
+111 - HTTP request succeeded
+111 - HTTP GET complete
+112 - HTTP GET http://127.0.0.1:27753/1.0/ping
+112 - HTTP request succeeded
+112 - HTTP GET complete
+113 - HTTP GET http://127.0.0.1:27753/1.0/ping
+113 - HTTP request succeeded
+113 - HTTP GET complete
+114 - HTTP GET http://127.0.0.1:27753/1.0/ping
+114 - HTTP request succeeded
+114 - HTTP GET complete
+115 - HTTP GET http://127.0.0.1:27753/1.0/ping
+115 - HTTP request succeeded
+115 - HTTP GET complete
+116 - HTTP GET http://127.0.0.1:27753/1.0/ping
+116 - HTTP request succeeded
+116 - HTTP GET complete
+117 - HTTP GET http://127.0.0.1:27753/1.0/ping
+117 - HTTP request succeeded
+117 - HTTP GET complete
+118 - HTTP GET http://127.0.0.1:27753/1.0/ping
+118 - HTTP request succeeded
+118 - HTTP GET complete
+119 - HTTP GET http://127.0.0.1:27753/1.0/ping
+119 - HTTP request succeeded
+119 - HTTP GET complete
+120 - HTTP GET http://127.0.0.1:27753/1.0/ping
+120 - HTTP request succeeded
+120 - HTTP GET complete
+121 - HTTP GET http://127.0.0.1:27753/1.0/ping
+121 - HTTP request succeeded
+121 - HTTP GET complete
+122 - HTTP GET http://127.0.0.1:27753/1.0/ping
+122 - HTTP request succeeded
+122 - HTTP GET complete
+123 - HTTP GET http://127.0.0.1:27753/1.0/ping
+123 - HTTP request succeeded
+123 - HTTP GET complete
+124 - HTTP GET http://127.0.0.1:27753/1.0/ping
+124 - HTTP request succeeded
+124 - HTTP GET complete
+125 - HTTP GET http://127.0.0.1:27753/1.0/ping
+125 - HTTP request succeeded
+125 - HTTP GET complete
+126 - HTTP GET http://127.0.0.1:27753/1.0/ping
+126 - HTTP request succeeded
+126 - HTTP GET complete
+127 - HTTP GET http://127.0.0.1:27753/1.0/ping
+127 - HTTP request succeeded
+127 - HTTP GET complete
+128 - HTTP GET http://127.0.0.1:27753/1.0/ping
+128 - HTTP request succeeded
+128 - HTTP GET complete
+129 - HTTP GET http://127.0.0.1:27753/1.0/ping
+129 - HTTP request succeeded
+129 - HTTP GET complete
+130 - HTTP GET http://127.0.0.1:27753/1.0/ping
+130 - HTTP request succeeded
+130 - HTTP GET complete
+131 - HTTP GET http://127.0.0.1:27753/1.0/ping
+131 - HTTP request succeeded
+131 - HTTP GET complete
+132 - HTTP GET http://127.0.0.1:27753/1.0/ping
+132 - HTTP request succeeded
+132 - HTTP GET complete
+133 - HTTP GET http://127.0.0.1:27753/1.0/ping
+133 - HTTP request succeeded
+133 - HTTP GET complete
+134 - HTTP GET http://127.0.0.1:27753/1.0/ping
+134 - HTTP request succeeded
+134 - HTTP GET complete
+135 - HTTP GET http://127.0.0.1:27753/1.0/ping
+135 - HTTP request succeeded
+135 - HTTP GET complete
+136 - HTTP GET http://127.0.0.1:27753/1.0/ping
+136 - HTTP request succeeded
+136 - HTTP GET complete
+137 - HTTP GET http://127.0.0.1:27753/1.0/ping
+137 - HTTP request succeeded
+137 - HTTP GET complete
+138 - HTTP GET http://127.0.0.1:27753/1.0/ping
+138 - HTTP request succeeded
+138 - HTTP GET complete
+139 - HTTP GET http://127.0.0.1:27753/1.0/ping
+139 - HTTP request succeeded
+139 - HTTP GET complete
+140 - HTTP GET http://127.0.0.1:27753/1.0/ping
+140 - HTTP request succeeded
+140 - HTTP GET complete
+141 - HTTP GET http://127.0.0.1:27753/1.0/ping
+141 - HTTP request succeeded
+141 - HTTP GET complete
+142 - HTTP GET http://127.0.0.1:27753/1.0/ping
+142 - HTTP request succeeded
+142 - HTTP GET complete
+143 - HTTP GET http://127.0.0.1:27753/1.0/ping
+143 - HTTP request succeeded
+143 - HTTP GET complete
+144 - HTTP GET http://127.0.0.1:27753/1.0/ping
+144 - HTTP request succeeded
+144 - HTTP GET complete
+145 - HTTP GET http://127.0.0.1:27753/1.0/ping
+145 - HTTP request succeeded
+145 - HTTP GET complete
+146 - HTTP GET http://127.0.0.1:27753/1.0/ping
+146 - HTTP request succeeded
+146 - HTTP GET complete
+147 - HTTP GET http://127.0.0.1:27753/1.0/ping
+147 - HTTP request succeeded
+147 - HTTP GET complete
+148 - HTTP GET http://127.0.0.1:27753/1.0/ping
+148 - HTTP request succeeded
+148 - HTTP GET complete
+149 - HTTP GET http://127.0.0.1:27753/1.0/ping
+149 - HTTP request succeeded
+149 - HTTP GET complete
+150 - HTTP GET http://127.0.0.1:27753/1.0/ping
+150 - HTTP request succeeded
+150 - HTTP GET complete
+151 - HTTP GET http://127.0.0.1:27753/1.0/ping
+151 - HTTP request succeeded
+151 - HTTP GET complete
+152 - HTTP GET http://127.0.0.1:27753/1.0/ping
+152 - HTTP request succeeded
+152 - HTTP GET complete
+153 - HTTP GET http://127.0.0.1:27753/1.0/ping
+153 - HTTP request succeeded
+153 - HTTP GET complete
+154 - HTTP GET http://127.0.0.1:27753/1.0/ping
+154 - HTTP request succeeded
+154 - HTTP GET complete
+155 - HTTP GET http://127.0.0.1:27753/1.0/ping
+155 - HTTP request succeeded
+155 - HTTP GET complete
+156 - HTTP GET http://127.0.0.1:27753/1.0/ping
+156 - HTTP request succeeded
+156 - HTTP GET complete
+157 - HTTP GET http://127.0.0.1:27753/1.0/ping
+157 - HTTP request succeeded
+157 - HTTP GET complete
+158 - HTTP GET http://127.0.0.1:27753/1.0/ping
+158 - HTTP request succeeded
+158 - HTTP GET complete
+159 - HTTP GET http://127.0.0.1:27753/1.0/ping
+159 - HTTP request succeeded
+159 - HTTP GET complete
+160 - HTTP GET http://127.0.0.1:27753/1.0/ping
+160 - HTTP request succeeded
+160 - HTTP GET complete
+161 - HTTP GET http://127.0.0.1:27753/1.0/ping
+161 - HTTP request succeeded
+161 - HTTP GET complete
+162 - HTTP GET http://127.0.0.1:27753/1.0/ping
+162 - HTTP request succeeded
+162 - HTTP GET complete
+163 - HTTP GET http://127.0.0.1:27753/1.0/ping
+163 - HTTP request succeeded
+163 - HTTP GET complete
+164 - HTTP GET http://127.0.0.1:27753/1.0/ping
+164 - HTTP request succeeded
+164 - HTTP GET complete
+165 - HTTP GET http://127.0.0.1:27753/1.0/ping
+165 - HTTP request succeeded
+165 - HTTP GET complete
+166 - HTTP GET http://127.0.0.1:27753/1.0/ping
+166 - HTTP request succeeded
+166 - HTTP GET complete
+167 - HTTP GET http://127.0.0.1:27753/1.0/ping
+167 - HTTP request succeeded
+167 - HTTP GET complete
+168 - HTTP GET http://127.0.0.1:27753/1.0/ping
+168 - HTTP request succeeded
+168 - HTTP GET complete
+169 - HTTP GET http://127.0.0.1:27753/1.0/ping
+169 - HTTP request succeeded
+169 - HTTP GET complete
+170 - HTTP GET http://127.0.0.1:27753/1.0/ping
+170 - HTTP request succeeded
+170 - HTTP GET complete
+171 - HTTP GET http://127.0.0.1:27753/1.0/ping
+171 - HTTP request succeeded
+171 - HTTP GET complete
+172 - HTTP GET http://127.0.0.1:27753/1.0/ping
+172 - HTTP request succeeded
+172 - HTTP GET complete
+173 - HTTP GET http://127.0.0.1:27753/1.0/ping
+173 - HTTP request succeeded
+173 - HTTP GET complete
+174 - HTTP GET http://127.0.0.1:27753/1.0/ping
+174 - HTTP request succeeded
+174 - HTTP GET complete
+175 - HTTP GET http://127.0.0.1:27753/1.0/ping
+175 - HTTP request succeeded
+175 - HTTP GET complete
+176 - HTTP GET http://127.0.0.1:27753/1.0/ping
+176 - HTTP request succeeded
+176 - HTTP GET complete
+177 - HTTP GET http://127.0.0.1:27753/1.0/ping
+177 - HTTP request succeeded
+177 - HTTP GET complete
+178 - HTTP GET http://127.0.0.1:27753/1.0/ping
+178 - HTTP request succeeded
+178 - HTTP GET complete
+179 - HTTP GET http://127.0.0.1:27753/1.0/ping
+179 - HTTP request succeeded
+179 - HTTP GET complete
+180 - HTTP GET http://127.0.0.1:27753/1.0/ping
+180 - HTTP request succeeded
+180 - HTTP GET complete
+181 - HTTP GET http://127.0.0.1:27753/1.0/ping
+181 - HTTP request succeeded
+181 - HTTP GET complete
+182 - HTTP GET http://127.0.0.1:27753/1.0/ping
+182 - HTTP request succeeded
+182 - HTTP GET complete
+183 - HTTP GET http://127.0.0.1:27753/1.0/ping
+183 - HTTP request succeeded
+183 - HTTP GET complete
+184 - HTTP GET http://127.0.0.1:27753/1.0/ping
+184 - HTTP request succeeded
+184 - HTTP GET complete
+185 - HTTP GET http://127.0.0.1:27753/1.0/ping
+185 - HTTP request succeeded
+185 - HTTP GET complete
+186 - HTTP GET http://127.0.0.1:27753/1.0/ping
+186 - HTTP request succeeded
+186 - HTTP GET complete
+187 - HTTP GET http://127.0.0.1:27753/1.0/ping
+187 - HTTP request succeeded
+187 - HTTP GET complete
+188 - HTTP GET http://127.0.0.1:27753/1.0/ping
+188 - HTTP request succeeded
+188 - HTTP GET complete
+189 - HTTP GET http://127.0.0.1:27753/1.0/ping
+189 - HTTP request succeeded
+189 - HTTP GET complete
+190 - HTTP GET http://127.0.0.1:27753/1.0/ping
+190 - HTTP request succeeded
+190 - HTTP GET complete
+191 - HTTP GET http://127.0.0.1:27753/1.0/ping
+191 - HTTP request succeeded
+191 - HTTP GET complete
+192 - HTTP GET http://127.0.0.1:27753/1.0/ping
+192 - HTTP request succeeded
+192 - HTTP GET complete
+193 - HTTP GET http://127.0.0.1:27753/1.0/ping
+193 - HTTP request succeeded
+193 - HTTP GET complete
+194 - HTTP GET http://127.0.0.1:27753/1.0/ping
+194 - HTTP request succeeded
+194 - HTTP GET complete
+195 - HTTP GET http://127.0.0.1:27753/1.0/ping
+195 - HTTP request succeeded
+195 - HTTP GET complete
+196 - HTTP GET http://127.0.0.1:27753/1.0/ping
+196 - HTTP request succeeded
+196 - HTTP GET complete
+197 - HTTP GET http://127.0.0.1:27753/1.0/ping
+197 - HTTP request succeeded
+197 - HTTP GET complete
+198 - HTTP GET http://127.0.0.1:27753/1.0/ping
+198 - HTTP request succeeded
+198 - HTTP GET complete
+199 - HTTP GET http://127.0.0.1:27753/1.0/ping
+199 - HTTP request succeeded
+199 - HTTP GET complete
+200 - HTTP GET http://127.0.0.1:27753/1.0/ping
+200 - HTTP request succeeded
+200 - HTTP GET complete
+201 - HTTP GET http://127.0.0.1:27753/1.0/ping
+201 - HTTP request succeeded
+201 - HTTP GET complete
+202 - HTTP GET http://127.0.0.1:27753/1.0/ping
+202 - HTTP request succeeded
+202 - HTTP GET complete
+203 - HTTP GET http://127.0.0.1:27753/1.0/ping
+203 - HTTP request succeeded
+203 - HTTP GET complete
+204 - HTTP GET http://127.0.0.1:27753/1.0/ping
+204 - HTTP request succeeded
+204 - HTTP GET complete
+205 - HTTP GET http://127.0.0.1:27753/1.0/ping
+205 - HTTP request succeeded
+205 - HTTP GET complete
+206 - HTTP GET http://127.0.0.1:27753/1.0/ping
+206 - HTTP request succeeded
+206 - HTTP GET complete
+207 - HTTP GET http://127.0.0.1:27753/1.0/ping
+207 - HTTP request succeeded
+207 - HTTP GET complete
+208 - HTTP GET http://127.0.0.1:27753/1.0/ping
+208 - HTTP request succeeded
+208 - HTTP GET complete
+209 - HTTP GET http://127.0.0.1:27753/1.0/ping
+209 - HTTP request succeeded
+209 - HTTP GET complete
+210 - HTTP GET http://127.0.0.1:27753/1.0/ping
+210 - HTTP request succeeded
+210 - HTTP GET complete
+211 - HTTP GET http://127.0.0.1:27753/1.0/ping
+211 - HTTP request succeeded
+211 - HTTP GET complete
+212 - HTTP GET http://127.0.0.1:27753/1.0/ping
+212 - HTTP request succeeded
+212 - HTTP GET complete
+213 - HTTP GET http://127.0.0.1:27753/1.0/ping
+213 - HTTP request succeeded
+213 - HTTP GET complete
+214 - HTTP GET http://127.0.0.1:27753/1.0/ping
+214 - HTTP request succeeded
+214 - HTTP GET complete
+215 - HTTP GET http://127.0.0.1:27753/1.0/ping
+215 - HTTP request succeeded
+215 - HTTP GET complete
+216 - HTTP GET http://127.0.0.1:27753/1.0/ping
+216 - HTTP request succeeded
+216 - HTTP GET complete
+217 - HTTP GET http://127.0.0.1:27753/1.0/ping
+217 - HTTP request succeeded
+217 - HTTP GET complete
+218 - HTTP GET http://127.0.0.1:27753/1.0/ping
+218 - HTTP request succeeded
+218 - HTTP GET complete
+219 - HTTP GET http://127.0.0.1:27753/1.0/ping
+219 - HTTP request succeeded
+219 - HTTP GET complete
+220 - HTTP GET http://127.0.0.1:27753/1.0/ping
+220 - HTTP request succeeded
+220 - HTTP GET complete
+221 - HTTP GET http://127.0.0.1:27753/1.0/ping
+221 - HTTP request succeeded
+221 - HTTP GET complete
+222 - HTTP GET http://127.0.0.1:27753/1.0/ping
+222 - HTTP request succeeded
+222 - HTTP GET complete
+223 - HTTP GET http://127.0.0.1:27753/1.0/ping
+223 - HTTP request succeeded
+223 - HTTP GET complete
+224 - HTTP GET http://127.0.0.1:27753/1.0/ping
+224 - HTTP request succeeded
+224 - HTTP GET complete
+225 - HTTP GET http://127.0.0.1:27753/1.0/ping
+225 - HTTP request succeeded
+225 - HTTP GET complete
+226 - HTTP GET http://127.0.0.1:27753/1.0/ping
+226 - HTTP request succeeded
+226 - HTTP GET complete
+227 - HTTP GET http://127.0.0.1:27753/1.0/ping
+227 - HTTP request succeeded
+227 - HTTP GET complete
+228 - HTTP GET http://127.0.0.1:27753/1.0/ping
+228 - HTTP request succeeded
+228 - HTTP GET complete
+229 - HTTP GET http://127.0.0.1:27753/1.0/ping
+229 - HTTP request succeeded
+229 - HTTP GET complete
+230 - HTTP GET http://127.0.0.1:27753/1.0/ping
+230 - HTTP request succeeded
+230 - HTTP GET complete
+231 - HTTP GET http://127.0.0.1:27753/1.0/ping
+231 - HTTP request succeeded
+231 - HTTP GET complete
+232 - HTTP GET http://127.0.0.1:27753/1.0/ping
+232 - HTTP request succeeded
+232 - HTTP GET complete
+233 - HTTP GET http://127.0.0.1:27753/1.0/ping
+233 - HTTP request succeeded
+233 - HTTP GET complete
+234 - HTTP GET http://127.0.0.1:27753/1.0/ping
+234 - HTTP request succeeded
+234 - HTTP GET complete
+235 - HTTP GET http://127.0.0.1:27753/1.0/ping
+235 - HTTP request succeeded
+235 - HTTP GET complete
+236 - HTTP GET http://127.0.0.1:27753/1.0/ping
+236 - HTTP request succeeded
+236 - HTTP GET complete
+237 - HTTP GET http://127.0.0.1:27753/1.0/ping
+237 - HTTP request succeeded
+237 - HTTP GET complete
+238 - HTTP GET http://127.0.0.1:27753/1.0/ping
+238 - HTTP request succeeded
+238 - HTTP GET complete
+239 - HTTP GET http://127.0.0.1:27753/1.0/ping
+239 - HTTP request succeeded
+239 - HTTP GET complete
+240 - HTTP GET http://127.0.0.1:27753/1.0/ping
+240 - HTTP request succeeded
+240 - HTTP GET complete
+241 - HTTP GET http://127.0.0.1:27753/1.0/ping
+241 - HTTP request succeeded
+241 - HTTP GET complete
+242 - HTTP GET http://127.0.0.1:27753/1.0/ping
+242 - HTTP request succeeded
+242 - HTTP GET complete
+243 - HTTP GET http://127.0.0.1:27753/1.0/ping
+243 - HTTP request succeeded
+243 - HTTP GET complete
+244 - HTTP GET http://127.0.0.1:27753/1.0/ping
+244 - HTTP request succeeded
+244 - HTTP GET complete
+245 - HTTP GET http://127.0.0.1:27753/1.0/ping
+245 - HTTP request succeeded
+245 - HTTP GET complete
+246 - HTTP GET http://127.0.0.1:27753/1.0/ping
+246 - HTTP request succeeded
+246 - HTTP GET complete
+247 - HTTP GET http://127.0.0.1:27753/1.0/ping
+247 - HTTP request succeeded
+247 - HTTP GET complete
+248 - HTTP GET http://127.0.0.1:27753/1.0/ping
+248 - HTTP request succeeded
+248 - HTTP GET complete
+249 - HTTP GET http://127.0.0.1:27753/1.0/ping
+249 - HTTP request succeeded
+249 - HTTP GET complete
+250 - HTTP GET http://127.0.0.1:27753/1.0/ping
+250 - HTTP request succeeded
+250 - HTTP GET complete
+251 - HTTP GET http://127.0.0.1:27753/1.0/ping
+251 - HTTP request succeeded
+251 - HTTP GET complete
+252 - HTTP GET http://127.0.0.1:27753/1.0/ping
+252 - HTTP request succeeded
+252 - HTTP GET complete
+253 - HTTP GET http://127.0.0.1:27753/1.0/ping
+253 - HTTP request succeeded
+253 - HTTP GET complete
+254 - HTTP GET http://127.0.0.1:27753/1.0/ping
+254 - HTTP request succeeded
+254 - HTTP GET complete
+255 - HTTP GET http://127.0.0.1:27753/1.0/ping
+255 - HTTP request succeeded
+255 - HTTP GET complete
+256 - HTTP GET http://127.0.0.1:27753/1.0/ping
+256 - HTTP request succeeded
+256 - HTTP GET complete
+257 - HTTP GET http://127.0.0.1:27753/1.0/ping
+257 - HTTP request succeeded
+257 - HTTP GET complete
+258 - HTTP GET http://127.0.0.1:27753/1.0/ping
+258 - HTTP request succeeded
+258 - HTTP GET complete
+259 - HTTP GET http://127.0.0.1:27753/1.0/ping
+259 - HTTP request succeeded
+259 - HTTP GET complete
+260 - HTTP GET http://127.0.0.1:27753/1.0/ping
+260 - HTTP request succeeded
+260 - HTTP GET complete
+261 - HTTP GET http://127.0.0.1:27753/1.0/ping
+261 - HTTP request succeeded
+261 - HTTP GET complete
+262 - HTTP GET http://127.0.0.1:27753/1.0/ping
+262 - HTTP request succeeded
+262 - HTTP GET complete
+263 - HTTP GET http://127.0.0.1:27753/1.0/ping
+263 - HTTP request succeeded
+263 - HTTP GET complete
+264 - HTTP GET http://127.0.0.1:27753/1.0/ping
+264 - HTTP request succeeded
+264 - HTTP GET complete
+265 - HTTP GET http://127.0.0.1:27753/1.0/ping
+265 - HTTP request succeeded
+265 - HTTP GET complete
+266 - HTTP GET http://127.0.0.1:27753/1.0/ping
+266 - HTTP request succeeded
+266 - HTTP GET complete
+267 - HTTP GET http://127.0.0.1:27753/1.0/ping
+267 - HTTP request succeeded
+267 - HTTP GET complete
+268 - HTTP GET http://127.0.0.1:27753/1.0/ping
+268 - HTTP request succeeded
+268 - HTTP GET complete
+269 - HTTP GET http://127.0.0.1:27753/1.0/ping
+269 - HTTP request succeeded
+269 - HTTP GET complete
+270 - HTTP GET http://127.0.0.1:27753/1.0/ping
+270 - HTTP request succeeded
+270 - HTTP GET complete
+271 - HTTP GET http://127.0.0.1:27753/1.0/ping
+271 - HTTP request succeeded
+271 - HTTP GET complete
+272 - HTTP GET http://127.0.0.1:27753/1.0/ping
+272 - HTTP request succeeded
+272 - HTTP GET complete
+273 - HTTP GET http://127.0.0.1:27753/1.0/ping
+273 - HTTP request succeeded
+273 - HTTP GET complete
+274 - HTTP GET http://127.0.0.1:27753/1.0/ping
+274 - HTTP request succeeded
+274 - HTTP GET complete
+275 - HTTP GET http://127.0.0.1:27753/1.0/ping
+275 - HTTP request succeeded
+275 - HTTP GET complete
+276 - HTTP GET http://127.0.0.1:27753/1.0/ping
+276 - HTTP request succeeded
+276 - HTTP GET complete
+277 - HTTP GET http://127.0.0.1:27753/1.0/ping
+277 - HTTP request succeeded
+277 - HTTP GET complete
+278 - HTTP GET http://127.0.0.1:27753/1.0/ping
+278 - HTTP request succeeded
+278 - HTTP GET complete
+279 - HTTP GET http://127.0.0.1:27753/1.0/ping
+279 - HTTP request succeeded
+279 - HTTP GET complete
+280 - HTTP GET http://127.0.0.1:27753/1.0/ping
+280 - HTTP request succeeded
+280 - HTTP GET complete
+281 - HTTP GET http://127.0.0.1:27753/1.0/ping
+281 - HTTP request succeeded
+281 - HTTP GET complete
+282 - HTTP GET http://127.0.0.1:27753/1.0/ping
+282 - HTTP request succeeded
+282 - HTTP GET complete
+283 - HTTP GET http://127.0.0.1:27753/1.0/ping
+283 - HTTP request succeeded
+283 - HTTP GET complete
+284 - HTTP GET http://127.0.0.1:27753/1.0/ping
+284 - HTTP request succeeded
+284 - HTTP GET complete
+285 - HTTP GET http://127.0.0.1:27753/1.0/ping
+285 - HTTP request succeeded
+285 - HTTP GET complete
+286 - HTTP GET http://127.0.0.1:27753/1.0/ping
+286 - HTTP request succeeded
+286 - HTTP GET complete
+287 - HTTP GET http://127.0.0.1:27753/1.0/ping
+287 - HTTP request succeeded
+287 - HTTP GET complete
+288 - HTTP GET http://127.0.0.1:27753/1.0/ping
+288 - HTTP request succeeded
+288 - HTTP GET complete
+289 - HTTP GET http://127.0.0.1:27753/1.0/ping
+289 - HTTP request succeeded
+289 - HTTP GET complete
+290 - HTTP GET http://127.0.0.1:27753/1.0/ping
+290 - HTTP request succeeded
+290 - HTTP GET complete
+291 - HTTP GET http://127.0.0.1:27753/1.0/ping
+291 - HTTP request succeeded
+291 - HTTP GET complete
+292 - HTTP GET http://127.0.0.1:27753/1.0/ping
+292 - HTTP request succeeded
+292 - HTTP GET complete
+293 - HTTP GET http://127.0.0.1:27753/1.0/ping
+293 - HTTP request succeeded
+293 - HTTP GET complete
+294 - HTTP GET http://127.0.0.1:27753/1.0/ping
+294 - HTTP request succeeded
+294 - HTTP GET complete
+295 - HTTP GET http://127.0.0.1:27753/1.0/ping
+295 - HTTP request succeeded
+295 - HTTP GET complete
+296 - HTTP GET http://127.0.0.1:27753/1.0/ping
+296 - HTTP request succeeded
+296 - HTTP GET complete
+297 - HTTP GET http://127.0.0.1:27753/1.0/ping
+297 - HTTP request succeeded
+297 - HTTP GET complete
+298 - HTTP GET http://127.0.0.1:27753/1.0/ping
+298 - HTTP request succeeded
+298 - HTTP GET complete
+299 - HTTP GET http://127.0.0.1:27753/1.0/ping
+299 - HTTP request succeeded
+299 - HTTP GET complete
+300 - HTTP GET http://127.0.0.1:27753/1.0/ping
+2 - Launching simulator if not already running
+Running: /var/folders/lf/x4bsgt3s53s992vr30w384wm0000gr/T/xdb/DeviceAgent.iOS.Dependencies/42d07e9bfef833f40c0ad2b89bf48b10/bin/iOSDeviceManager launch-simulator -d FAE49182-D94F-462B-8425-50D36D5918E8
+Exit code '0' received from '/var/folders/lf/x4bsgt3s53s992vr30w384wm0000gr/T/xdb/DeviceAgent.iOS.Dependencies/42d07e9bfef833f40c0ad2b89bf48b10/bin/iOSDeviceManager launch-simulator -d FAE49182-D94F-462B-8425-50D36D5918E8'
+Running: /var/folders/lf/x4bsgt3s53s992vr30w384wm0000gr/T/xdb/DeviceAgent.iOS.Dependencies/42d07e9bfef833f40c0ad2b89bf48b10/bin/iOSDeviceManager install "/var/folders/lf/x4bsgt3s53s992vr30w384wm0000gr/T/xdb/DeviceAgent.iOS.Dependencies/42d07e9bfef833f40c0ad2b89bf48b10/app/DeviceAgent-Runner.app" -d FAE49182-D94F-462B-8425-50D36D5918E8
+Exit code '0' received from '/var/folders/lf/x4bsgt3s53s992vr30w384wm0000gr/T/xdb/DeviceAgent.iOS.Dependencies/42d07e9bfef833f40c0ad2b89bf48b10/bin/iOSDeviceManager install "/var/folders/lf/x4bsgt3s53s992vr30w384wm0000gr/T/xdb/DeviceAgent.iOS.Dependencies/42d07e9bfef833f40c0ad2b89bf48b10/app/DeviceAgent-Runner.app" -d FAE49182-D94F-462B-8425-50D36D5918E8'
+Running: /var/folders/lf/x4bsgt3s53s992vr30w384wm0000gr/T/xdb/DeviceAgent.iOS.Dependencies/42d07e9bfef833f40c0ad2b89bf48b10/bin/iOSDeviceManager is-installed /var/folders/lf/x4bsgt3s53s992vr30w384wm0000gr/T/xdb/DeviceAgent.iOS.Dependencies/42d07e9bfef833f40c0ad2b89bf48b10/app/DeviceAgent-Runner.app -d FAE49182-D94F-462B-8425-50D36D5918E8
+Exit code '0' received from '/var/folders/lf/x4bsgt3s53s992vr30w384wm0000gr/T/xdb/DeviceAgent.iOS.Dependencies/42d07e9bfef833f40c0ad2b89bf48b10/bin/iOSDeviceManager is-installed /var/folders/lf/x4bsgt3s53s992vr30w384wm0000gr/T/xdb/DeviceAgent.iOS.Dependencies/42d07e9bfef833f40c0ad2b89bf48b10/app/DeviceAgent-Runner.app -d FAE49182-D94F-462B-8425-50D36D5918E8'
+301 - HTTP GET http://127.0.0.1:27753/1.0/ping
+301 - HTTP request succeeded
+301 - HTTP GET complete
+302 - HTTP POST http://127.0.0.1:27753/1.0/session { bundleID: "com.companyname.SamplesApp", launchArgs: [ "ApplicationUnderTestLaunchedByUITest" ], environment: [  ] }
+302 - HTTP request succeeded
+302 - HTTP POST complete
+DeviceAgent Start Session response: OK - launched!
+HTTP GET { Url: { AbsolutePath: "/version", AbsoluteUri: "http://127.0.0.1:37265/version", LocalPath: "/version", Authority: "127.0.0.1:37265", HostNameType: IPv4, IsDefaultPort: False, IsFile: False, IsLoopback: True, PathAndQuery: "/version", Segments: [ "/", "version" ], IsUnc: False, Host: "127.0.0.1", Port: 37265, Query: "", Fragment: "", Scheme: "http", OriginalString: "http://127.0.0.1:37265/version", DnsSafeHost: "127.0.0.1", IdnHost: "127.0.0.1", IsAbsoluteUri: True, UserEscaped: False, UserInfo: "" } }
+GET Complete { StatusCode: 200, Contents: "{"device_family":"iPad","outcome":"SUCCESS","server_port":37265,"simulator":"CoreSimulator 681.5.4 - Device: iPad Pro (12.9-inch) (3rd generation) (FAE49182-D94F-462B-8425-50D36D5918E8) - Runtime: iOS 13.0 (17A577a) - DeviceType: iPad Pro (12.9-inch) (3rd generation)","app_name":"Uno SamplesApp","app_version":"1.0","screen_dimensions":{"height":2732,"bounds":{"y":0,"x":0,"width":1024,"height":1366},"sample":1,"native_bounds":{"y":0,"x":0,"width":2048,"height":2732},"width":2048,"native_scale":2,"bounds_portrait_height":1366,"bounds_portrait_width":1024,"scale":2},"git":{"revision":"e8754b3","remote_origin":"https:\/\/github.com\/calabash\/calabash-ios-server.git","branch":"HEAD"},"device_name":"iPad Pro (12.9-inch) (3rd generation)","4inch":false,"app_id":"com.companyname.SamplesApp","form_factor":"ipad pro 12.9","version":"0.21.8","server_identifier_to_skip":"","short_version_string":"1.0","server_identifier":"e8754b3cd4c478021b7b5f5654606d3a9bc25485","build_date":"2019-16-16 16:21:21 +0200","ios_version":"13.0","iphone_app_emulated_on_ipad":false,"model_identifier":"iPad8,5","app_base_sdk":"iphonesimulator13.1"}" }
+Test server version: 0.21.8
+303 - HTTP POST http://127.0.0.1:27753/1.0/dismiss-springboard-alerts
+303 - HTTP request succeeded
+303 - HTTP POST complete
+DeviceAgent springboard dismiss alerts response: OK - no alerts
+HTTP POST { Url: { AbsolutePath: "/map", AbsoluteUri: "http://127.0.0.1:37265/map", LocalPath: "/map", Authority: "127.0.0.1:37265", HostNameType: IPv4, IsDefaultPort: False, IsFile: False, IsLoopback: True, PathAndQuery: "/map", Segments: [ "/", "map" ], IsUnc: False, Host: "127.0.0.1", Port: 37265, Query: "", Fragment: "", Scheme: "http", OriginalString: "http://127.0.0.1:37265/map", DnsSafeHost: "127.0.0.1", IdnHost: "127.0.0.1", IsAbsoluteUri: True, UserEscaped: False, UserInfo: "" } }
+POST Complete { StatusCode: OK, StatusDescription: "OK", ResponseHeaders: "Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3000
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+Accept-Ranges: bytes
+Date: Fri, 01 Nov 2019 15:56:01 GMT
+Access-Control-Allow-Origin: *
+", Contents: "{"status_bar_orientation":"down","results":[{"alpha":1,"enabled":true,"id":null,"visible":1,"frame":{"y":0,"x":0,"width":1024,"height":1366},"accessibilityElement":false,"class":"Uno_UI_Controls_Window","label":null,"description":"<Uno_UI_Controls_Window: 0x7fb653c305e0; baseClass = UIWindow; frame = (0 0; 1024 1366); gestureRecognizers = <NSArray: 0x600003a4aac0>; layer = <UIWindowLayer: 0x6000032b8ac0>>","value":null,"rect":{"y":0,"center_x":512,"center_y":683,"x":0,"width":1024,"height":1366}},{"alpha":1,"enabled":true,"id":null,"visible":1,"frame":{"y":0,"x":0,"width":1024,"height":1366},"accessibilityElement":false,"class":"UITransitionView","label":null,"description":"<UITransitionView: 0x7fb653d16060; frame = (0 0; 1024 1366); autoresize = W+H; layer = <CALayer: 0x6000033d4000>>","value":null,"rect":{"y":0,"center_x":512,"center_y":683,"x":0,"width":1024,"height":1366}},{"alpha":1,"enabled":true,"id":null,"visible":1,"frame":{"y":0,"x":0,"width":1024,"height":1366},"accessibilityElement":false,"class":"UIDropShadowView","label":null,"description":"<UIDropShadowView: 0x7fb653d0ec30; frame = (0 0; 1024 1366); clipsToBounds = YES; autoresize = W+H; layer = <CALayer: 0x6000033d40e0>>","value":null,"rect":{"y":0,"center_x":512,"center_y":683,"x":0,"width":1024,"height":1366}},{"alpha":1,"enabled":true,"id":null,"visible":1,"frame":{"y":0,"x":0,"width":1024,"height":1366},"accessibilityElement":false,"class":"UIView","label":null,"description":"<UIView: 0x7fb653d17d70; frame = (0 0; 1024 1366); clipsToBounds = YES; autoresize = W+H; layer = <CALayer: 0x6000033d4100>>","value":null,"rect":{"y":0,"center_x":512,"center_y":683,"x":0,"width":1024,"height":1366}},{"alpha":1,"enabled":true,"id":null,"visible":1,"frame":{"y":0,"x":0,"width":1024,"height":1366},"accessibilityElement":false,"class":"UILayoutContainerView","label":null,"description":"<UILayoutContainerView: 0x7fb653d128c0; frame = (0 0; 1024 1366); clipsToBounds = YES; autoresize = W+H; gestureRecognizers = <NSArray: 0x600003a12ca0>; layer = <CALayer: 0x6000032c8880>>","value":null,"rect":{"y":0,"center_x":512,"center_y":683,"x":0,"width":1024,"height":1366}},{"alpha":1,"enabled":true,"id":null,"visible":1,"frame":{"y":0,"x":0,"width":1024,"height":1366},"accessibilityElement":false,"class":"Windows_UI_Xaml_Controls_Grid","label":null,"description":"<Windows_UI_Xaml_Controls_Grid: 0x7fb653c2af80; frame = (0 0; 1024 1366); clipsToBounds = YES; autoresize = LM+W+RM+TM+H+BM; layer = <CALayer: 0x6000032c6e40>>","value":null,"rect":{"y":0,"center_x":512,"center_y":683,"x":0,"width":1024,"height":1366}},{"alpha":1,"enabled":true,"id":null,"visible":1,"frame":{"y":0,"x":0,"width":1024,"height":1366},"accessibilityElement":false,"class":"Windows_UI_Xaml_Controls_Border","label":null,"description":"<Windows_UI_Xaml_Controls_Border: 0x7fb653d19260; frame = (0 0; 1024 1366); clipsToBounds = YES; layer = <CALayer: 0x6000032eae20>>","value":null,"rect":{"y":0,"center_x":512,"center_y":683,"x":0,"width":1024,"height":1366}},{"alpha":1,"enabled":true,"id":null,"visible":1,"frame":{"y":0,"x":0,"width":1024,"height":1366},"accessibilityElement":false,"class":"Windows_UI_Xaml_Controls_Frame","label":null,"description":"<Windows_UI_Xaml_Controls_Frame: 0x7fb653d00d40; frame = (0 0; 1024 1366); clipsToBounds = YES; layer = <CALayer: 0x6000032f59e0>>","value":null,"rect":{"y":0,"center_x":512,"center_y":683,"x":0,"width":1024,"height":1366}},{"alpha":1,"enabled":true,"id":null,"visible":1,"frame":{"y":0,"x":0,"width":1024,"height":1366},"accessibilityElement":false,"class":"Windows_UI_Xaml_Controls_ContentPresenter","label":null,"description":"<Windows_UI_Xaml_Controls_ContentPresenter: 0x7fb653c00940; frame = (0 0; 1024 1366); clipsToBounds = YES; autoresize = W+H; layer = <CALayer: 0x600003316820>>","value":null,"rect":{"y":0,"center_x":512,"center_y":683,"x":0,"width":1024,"height":1366}},{"alpha":1,"enabled":true,"id":null,"visible":1,"frame":{"y":0,"x":0,"width":1024,"height":1366},"accessibilityElement":false,"class":"SamplesApp_MainPage","label":null,"description":"<SamplesApp_MainPage: 0x7fb653c31490; frame = (0 0; 1024 1366); clipsToBounds = YES; autoresize = W+H; layer = <CALayer: 0x6000033290c0>>","value":null,"rect":{"y":0,"center_x":512,"center_y":683,"x":0,"width":1024,"height":1366}},{"alpha":1,"enabled":true,"id":"sampleControl","visible":1,"frame":{"y":0,"x":0,"width":1024,"height":1366},"accessibilityElement":false,"class":"Uno_UI_Samples_Controls_SampleChooserControl","label":null,"description":"<Uno_UI_Samples_Controls_SampleChooserControl: 0x7fb653c2b340; frame = (0 0; 1024 1366); clipsToBounds = YES; autoresize = W+H; layer = <CALayer: 0x600003329740>>","value":null,"rect":{"y":0,"center_x":512,"center_y":683,"x":0,"width":1024,"height":1366}},{"alpha":1,"enabled":true,"id":"SplitView","visible":1,"frame":{"y":0,"x":0,"width":1024,"height":1366},"accessibilityElement":false,"class":"Windows_UI_Xaml_Controls_SplitView","label":null,"description":"<Windows_UI_Xaml_Controls_SplitView: 0x7fb653c31f50; frame = (0 0; 1024 1366); clipsToBounds = YES; autoresize = W+H; layer = <CALayer: 0x6000033346a0>>","value":null,"rect":{"y":0,"center_x":512,"center_y":683,"x":0,"width":1024,"height":1366}},{"alpha":1,"enabled":true,"id":null,"visible":1,"frame":{"y":0,"x":0,"width":1024,"height":1366},"accessibilityElement":false,"class":"Windows_UI_Xaml_Controls_Grid","label":null,"description":"<Windows_UI_Xaml_Controls_Grid: 0x7fb653f59b30; frame = (0 0; 1024 1366); clipsToBounds = YES; autoresize = W+H; layer = <CALayer: 0x60000337a660>>","value":null,"rect":{"y":0,"center_x":512,"center_y":683,"x":0,"width":1024,"height":1366}},{"alpha":1,"enabled":true,"id":"ContentRoot","visible":1,"frame":{"y":0,"x":0,"width":1024,"height":1366},"accessibilityElement":false,"class":"Windows_UI_Xaml_Controls_Grid","label":null,"description":"<Windows_UI_Xaml_Controls_Grid: 0x7fb653f58c70; frame = (0 0; 1024 1366); clipsToBounds = YES; layer = <CALayer: 0x60000337b800>>","value":null,"rect":{"y":0,"center_x":512,"center_y":683,"x":0,"width":1024,"height":1366}},{"alpha":1,"enabled":true,"id":null,"visible":1,"frame":{"y":0,"x":0,"width":1024,"height":1366},"accessibilityElement":false,"class":"Windows_UI_Xaml_Controls_Border","label":null,"description":"<Windows_UI_Xaml_Controls_Border: 0x7fb653f5a5c0; frame = (0 0; 1024 1366); clipsToBounds = YES; layer = <CALayer: 0x60000337b780>>","value":null,"rect":{"y":0,"center_x":512,"center_y":683,"x":0,"width":1024,"height":1366}},{"alpha":1,"enabled":true,"id":null,"visible":1,"frame":{"y":0,"x":0,"width":1024,"height":1366},"accessibilityElement":false,"class":"Windows_UI_Xaml_Controls_Grid","label":null,"description":"<Windows_UI_Xaml_Controls_Grid: 0x7fb653f43630; frame = (0 0; 1024 1366); clipsToBounds = YES; layer = <CALayer: 0x6000033698c0>>","value":null,"rect":{"y":0,"center_x":512,"center_y":683,"x":0,"width":1024,"height":1366}},{"alpha":1,"enabled":true,"id":null,"visible":1,"frame":{"y":24,"x":0,"width":1024,"height":50},"accessibilityElement":false,"class":"Windows_UI_Xaml_Controls_Grid","label":null,"description":"<Windows_UI_Xaml_Controls_Grid: 0x7fb653f42100; frame = (0 24; 1024 50); clipsToBounds = YES; layer = <CALayer: 0x600003369920>>","value":null,"rect":{"y":24,"center_x":512,"center_y":49,"x":0,"width":1024,"height":50}},{"alpha":1,"enabled":true,"id":null,"visible":1,"frame":{"y":0.5,"x":0,"width":48,"height":48},"accessibilityElement":true,"class":"Windows_UI_Xaml_Controls_Primitives_ToggleButton","label":"?","description":"<Windows_UI_Xaml_Controls_Primitives_ToggleButton: 0x7fb653f42260; frame = (0 0.5; 48 48); clipsToBounds = YES; layer = <CALayer: 0x600003369d60>>","value":null,"rect":{"y":24.5,"center_x":24,"center_y":48.5,"x":0,"width":48,"height":48}},{"alpha":1,"enabled":true,"id":null,"visible":1,"frame":{"y":0,"x":0,"width":48,"height":48},"accessibilityElement":false,"class":"Windows_UI_Xaml_Controls_Grid","label":null,"description":"<Windows_UI_Xaml_Controls_Grid: 0x7fb653f48e80; frame = (0 0; 48 48); clipsToBounds = YES; autoresize = W+H; layer = <CALayer: 0x600003377620>>","value":null,"rect":{"y":24.5,"center_x":24,"center_y":48.5,"x":0,"width":48,"height":48}},{"alpha":1,"enabled":true,"id":null,"visible":1,"frame":{"y":12.5,"x":14,"width":20,"height":23},"accessibilityElement":false,"class":"Windows_UI_Xaml_Controls_ContentPresenter","label":null,"description":"<Windows_UI_Xaml_Controls_ContentPresenter: 0x7fb653f46c50; frame = (14 12.5; 20 23); clipsToBounds = YES; layer = <CALayer: 0x600003377680>>","value":null,"rect":{"y":37,"center_x":24,"center_y":48.5,"x":14,"width":20,"height":23}},{"alpha":1,"enabled":true,"id":null,"visible":1,"frame":{"y":0,"x":0,"width":20,"height":23},"accessibilityElement":true,"class":"Windows_UI_Xaml_Controls_ImplicitTextBlock","label":"?","description":"<Windows_UI_Xaml_Controls_ImplicitTextBlock: 0x7fb653f46db0; frame = (0 0; 20 23); clipsToBounds = YES; autoresize = W+H; layer = <CALayer: 0x600003377800>>","value":null,"rect":{"y":37,"center_x":24,"center_y":48.5,"x":14,"width":20,"height":23}},{"alpha":1,"enabled":true,"id":"CurrentSelectedSample.ControlName","visible":1,"frame":{"y":17.5,"x":457,"width":0,"height":14},"accessibilityElement":true,"class":"Windows_UI_Xaml_Controls_TextBlock","label":"","description":"<Windows_UI_Xaml_Controls_TextBlock: 0x7fb653f4d6e0; frame = (457 17.5; 0 14); clipsToBounds = YES; layer = <CALayer: 0x600003377a80>>","value":null,"rect":{"y":41.5,"center_x":457,"center_y":48.5,"x":457,"width":0,"height":14}},{"alpha":1,"enabled":false,"id":"LoadPreviousTestCommand","visible":1,"frame":{"y":4.5,"x":864,"width":40,"height":40},"accessibilityElement":true,"class":"Windows_UI_Xaml_Controls_Button","label":"","description":"<Windows_UI_Xaml_Controls_Button: 0x7fb653f4d840; frame = (864 4.5; 40 40); clipsToBounds = YES; userInteractionEnabled = NO; layer = <CALayer: 0x600003377aa0>>","value":null,"rect":{"y":28.5,"center_x":884,"center_y":48.5,"x":864,"width":40,"height":40}},{"alpha":0.2000000029802322,"enabled":false,"id":"ContentGrid","visible":1,"frame":{"y":0,"x":0,"width":40,"height":40},"accessibilityElement":false,"class":"Windows_UI_Xaml_Controls_Border","label":null,"description":"<Windows_UI_Xaml_Controls_Border: 0x7fb653f4dce0; frame = (0 0; 40 40); clipsToBounds = YES; alpha = 0.2; autoresize = W+H; userInteractionEnabled = NO; layer = <CALayer: 0x600003377a00>>","value":null,"rect":{"y":28.5,"center_x":884,"center_y":48.5,"x":864,"width":40,"height":40}},{"alpha":1,"enabled":false,"id":"ContentPresenter","visible":1,"frame":{"y":0,"x":0,"width":40,"height":40},"accessibilityElement":false,"class":"Windows_UI_Xaml_Controls_ContentPresenter","label":null,"description":"<Windows_UI_Xaml_Controls_ContentPresenter: 0x7fb653f4de40; frame = (0 0; 40 40); clipsToBounds = YES; userInteractionEnabled = NO; layer = <CALayer: 0x600003377ba0>>","value":null,"rect":{"y":28.5,"center_x":884,"center_y":48.5,"x":864,"width":40,"height":40}},{"alpha":1,"enabled":false,"id":null,"visible":1,"frame":{"y":14,"x":0,"width":30,"height":16},"accessibilityElement":false,"class":"Uno_UI_Samples_Controls_PathControl","label":null,"description":"<Uno_UI_Samples_Controls_PathControl: 0x7fb653f4aa60; frame = (0 14; 30 16); clipsToBounds = YES; autoresize = W+H; userInteractionEnabled = NO; layer = <CALayer: 0x600003377c00>>","value":null,"rect":{"y":42.5,"center_x":879,"center_y":50.5,"x":864,"width":30,"height":16}},{"alpha":1,"enabled":false,"id":null,"visible":1,"frame":{"y":0,"x":10,"width":10,"height":16},"accessibilityElement":false,"class":"Windows_UI_Xaml_Shapes_Path","label":null,"description":"<Windows_UI_Xaml_Shapes_Path: 0x7fb653f4abc0; frame = (10 0; 10 16); clipsToBounds = YES; autoresize = W+H; userInteractionEnabled = NO; layer = <CALayer: 0x60000336bd40>>","value":null,"rect":{"y":42.5,"center_x":879,"center_y":50.5,"x":874,"width":10,"height":16}},{"alpha":1,"enabled":false,"id":"ReloadCurrentTestCommand","visible":1,"frame":{"y":4.5,"x":904,"width":40,"height":40},"accessibilityElement":true,"class":"Windows_UI_Xaml_Controls_Button","label":"","description":"<Windows_UI_Xaml_Controls_Button: 0x7fb653f4e420; frame = (904 4.5; 40 40); clipsToBounds = YES; userInteractionEnabled = NO; layer = <CALayer: 0x60000336a260>>","value":null,"rect":{"y":28.5,"center_x":924,"center_y":48.5,"x":904,"width":40,"height":40}},{"alpha":0.2000000029802322,"enabled":false,"id":"ContentGrid","visible":1,"frame":{"y":0,"x":0,"width":40,"height":40},"accessibilityElement":false,"class":"Windows_UI_Xaml_Controls_Border","label":null,"description":"<Windows_UI_Xaml_Controls_Border: 0x7fb653f4e580; frame = (0 0; 40 40); clipsToBounds = YES; alpha = 0.2; autoresize = W+H; userInteractionEnabled = NO; layer = <CALayer: 0x60000336be80>>","value":null,"rect":{"y":28.5,"center_x":924,"center_y":48.5,"x":904,"width":40,"height":40}},{"alpha":1,"enabled":false,"id":"ContentPresenter","visible":1,"frame":{"y":0,"x":0,"width":40,"height":40},"accessibilityElement":false,"class":"Windows_UI_Xaml_Controls_ContentPresenter","label":null,"description":"<Windows_UI_Xaml_Controls_ContentPresenter: 0x7fb653f4d0f0; frame = (0 0; 40 40); clipsToBounds = YES; userInteractionEnabled = NO; layer = <CALayer: 0x60000336bfa0>>","value":null,"rect":{"y":28.5,"center_x":924,"center_y":48.5,"x":904,"width":40,"height":40}},{"alpha":1,"enabled":false,"id":null,"visible":1,"frame":{"y":14,"x":0,"width":30,"height":16},"accessibilityElement":false,"class":"Uno_UI_Samples_Controls_PathControl","label":null,"description":"<Uno_UI_Samples_Controls_PathControl: 0x7fb653f4d250; frame = (0 14; 30 16); clipsToBounds = YES; autoresize = W+H; userInteractionEnabled = NO; layer = <CALayer: 0x60000336bf20>>","value":null,"rect":{"y":42.5,"center_x":919,"center_y":50.5,"x":904,"width":30,"height":16}},{"alpha":1,"enabled":false,"id":null,"visible":1,"frame":{"y":0,"x":7,"width":16,"height":16},"accessibilityElement":false,"class":"Windows_UI_Xaml_Shapes_Path","label":null,"description":"<Windows_UI_Xaml_Shapes_Path: 0x7fb653f4ffd0; frame = (7 0; 16 16); clipsToBounds = YES; autoresize = W+H; userInteractionEnabled = NO; layer = <CALayer: 0x600003370340>>","value":null,"rect":{"y":42.5,"center_x":919,"center_y":50.5,"x":911,"width":16,"height":16}},{"alpha":1,"enabled":false,"id":"LoadNextTestCommand","visible":1,"frame":{"y":4.5,"x":944,"width":40,"height":40},"accessibilityElement":true,"class":"Windows_UI_Xaml_Controls_Button","label":"","description":"<Windows_UI_Xaml_Controls_Button: 0x7fb653f4f170; frame = (944 4.5; 40 40); clipsToBounds = YES; userInteractionEnabled = NO; layer = <CALayer: 0x600003371120>>","value":null,"rect":{"y":28.5,"center_x":964,"center_y":48.5,"x":944,"width":40,"height":40}},{"alpha":0.2000000029802322,"enabled":false,"id":"ContentGrid","visible":1,"frame":{"y":0,"x":0,"width":40,"height":40},"accessibilityElement":false,"class":"Windows_UI_Xaml_Controls_Border","label":null,"description":"<Windows_UI_Xaml_Controls_Border: 0x7fb653f4f2d0; frame = (0 0; 40 40); clipsToBounds = YES; alpha = 0.2; autoresize = W+H; userInteractionEnabled = NO; layer = <CALayer: 0x600003370f20>>","value":null,"rect":{"y":28.5,"center_x":964,"center_y":48.5,"x":944,"width":40,"height":40}},{"alpha":1,"enabled":false,"id":"ContentPresenter","visible":1,"frame":{"y":0,"x":0,"width":40,"height":40},"accessibilityElement":false,"class":"Windows_UI_Xaml_Controls_ContentPresenter","label":null,"description":"<Windows_UI_Xaml_Controls_ContentPresenter: 0x7fb653f47b50; frame = (0 0; 40 40); clipsToBounds = YES; userInteractionEnabled = NO; layer = <CALayer: 0x600003370e00>>","value":null,"rect":{"y":28.5,"center_x":964,"center_y":48.5,"x":944,"width":40,"height":40}},{"alpha":1,"enabled":false,"id":null,"visible":1,"frame":{"y":14,"x":0,"width":30,"height":16},"accessibilityElement":false,"class":"Uno_UI_Samples_Controls_PathControl","label":null,"description":"<Uno_UI_Samples_Controls_PathControl: 0x7fb653f47cb0; frame = (0 14; 30 16); clipsToBounds = YES; autoresize = W+H; userInteractionEnabled = NO; layer = <CALayer: 0x600003370e40>>","value":null,"rect":{"y":42.5,"center_x":959,"center_y":50.5,"x":944,"width":30,"height":16}},{"alpha":1,"enabled":false,"id":null,"visible":1,"frame":{"y":0,"x":10,"width":10,"height":16},"accessibilityElement":false,"class":"Windows_UI_Xaml_Shapes_Path","label":null,"description":"<Windows_UI_Xaml_Shapes_Path: 0x7fb653f517f0; frame = (10 0; 10 16); clipsToBounds = YES; autoresize = W+H; userInteractionEnabled = NO; layer = <CALayer: 0x6000033713e0>>","value":null,"rect":{"y":42.5,"center_x":959,"center_y":50.5,"x":954,"width":10,"height":16}},{"alpha":1,"enabled":true,"id":"ToggleFavoriteCommand","visible":1,"frame":{"y":4.5,"x":984,"width":40,"height":40},"accessibilityElement":true,"class":"Windows_UI_Xaml_Controls_Button","label":"","description":"<Windows_UI_Xaml_Controls_Button: 0x7fb653f51950; frame = (984 4.5; 40 40); clipsToBounds = YES; layer = <CALayer: 0x600003371420>>","value":null,"rect":{"y":28.5,"center_x":1004,"center_y":48.5,"x":984,"width":40,"height":40}},{"alpha":1,"enabled":true,"id":"ContentGrid","visible":1,"frame":{"y":0,"x":0,"width":40,"height":40},"accessibilityElement":false,"class":"Windows_UI_Xaml_Controls_Border","label":null,"description":"<Windows_UI_Xaml_Controls_Border: 0x7fb653f51200; frame = (0 0; 40 40); clipsToBounds = YES; autoresize = W+H; layer = <CALayer: 0x6000033714c0>>","value":null,"rect":{"y":28.5,"center_x":1004,"center_y":48.5,"x":984,"width":40,"height":40}},{"alpha":1,"enabled":true,"id":"ContentPresenter","visible":1,"frame":{"y":0,"x":0,"width":40,"height":40},"accessibilityElement":false,"class":"Windows_UI_Xaml_Controls_ContentPresenter","label":null,"description":"<Windows_UI_Xaml_Controls_ContentPresenter: 0x7fb653f51360; frame = (0 0; 40 40); clipsToBounds = YES; layer = <CALayer: 0x6000033714a0>>","value":null,"rect":{"y":28.5,"center_x":1004,"center_y":48.5,"x":984,"width":40,"height":40}},{"alpha":1,"enabled":true,"id":null,"visible":1,"frame":{"y":10.5,"x":10,"width":20,"height":19},"accessibilityElement":false,"class":"Uno_UI_Samples_Controls_PathControl","label":null,"description":"<Uno_UI_Samples_Controls_PathControl: 0x7fb653f50c10; frame = (10 10.5; 20 19); clipsToBounds = YES; autoresize = W+H; layer = <CALayer: 0x600003371500>>","value":null,"rect":{"y":39,"center_x":1004,"center_y":48.5,"x":994,"width":20,"height":19}},{"alpha":1,"enabled":true,"id":null,"visible":1,"frame":{"y":0,"x":0,"width":20,"height":19},"accessibilityElement":false,"class":"Windows_UI_Xaml_Shapes_Path","label":null,"description":"<Windows_UI_Xaml_Shapes_Path: 0x7fb653f50d70; frame = (0 0; 20 19); clipsToBounds = YES; autoresize = W+H; layer = <CALayer: 0x600003371e80>>","value":null,"rect":{"y":39,"center_x":1004,"center_y":48.5,"x":994,"width":20,"height":19}},{"alpha":1,"enabled":true,"id":null,"visible":1,"frame":{"y":74,"x":0,"width":1024,"height":1272},"accessibilityElement":false,"class":"Windows_UI_Xaml_Controls_ContentControl","label":null,"description":"<Windows_UI_Xaml_Controls_ContentControl: 0x7fb653f577f0; frame = (0 74; 1024 1272); clipsToBounds = YES; layer = <CALayer: 0x6000033729a0>>","value":null,"rect":{"y":74,"center_x":512,"center_y":710,"x":0,"width":1024,"height":1272}}],"outcome":"SUCCESS"}" }
+2 - Exception
+Exception: System.Threading.ThreadAbortException: Thread was being aborted.
+  at (wrapper managed-to-native) System.Threading.Monitor.Monitor_wait(object,int)
+  at System.Threading.Monitor.ObjWait (System.Boolean exitContext, System.Int32 millisecondsTimeout, System.Object obj) [0x0002f] in <8786ba7ca96d408c8c0d5c5e15ea3164>:0 
+  at System.Threading.Monitor.Wait (System.Object obj, System.Int32 millisecondsTimeout, System.Boolean exitContext) [0x0000e] in <8786ba7ca96d408c8c0d5c5e15ea3164>:0 
+  at System.Threading.Monitor.Wait (System.Object obj, System.Int32 millisecondsTimeout) [0x00000] in <8786ba7ca96d408c8c0d5c5e15ea3164>:0 
+  at System.Threading.ManualResetEventSlim.Wait (System.Int32 millisecondsTimeout, System.Threading.CancellationToken cancellationToken) [0x00100] in <8786ba7ca96d408c8c0d5c5e15ea3164>:0 
+  at System.Threading.Tasks.Task.WaitAllBlockingCore (System.Collections.Generic.LowLevelListWithIList`1[T] tasks, System.Int32 millisecondsTimeout, System.Threading.CancellationToken cancellationToken) [0x00038] in <8786ba7ca96d408c8c0d5c5e15ea3164>:0 
+  at System.Threading.Tasks.Task.WaitAll (System.Threading.Tasks.Task[] tasks, System.Int32 millisecondsTimeout, System.Threading.CancellationToken cancellationToken) [0x000e6] in <8786ba7ca96d408c8c0d5c5e15ea3164>:0 
+  at System.Threading.Tasks.Task.WaitAll (System.Threading.Tasks.Task[] tasks, System.Int32 millisecondsTimeout) [0x00000] in <8786ba7ca96d408c8c0d5c5e15ea3164>:0 
+  at System.Threading.Tasks.Task.WaitAll (System.Threading.Tasks.Task[] tasks) [0x00000] in <8786ba7ca96d408c8c0d5c5e15ea3164>:0 
+  at Xamarin.UITest.XDB.Services.Processes.ProcessService.Run (System.String command, System.String arguments) [0x0004f] in <de61ebc37b494176b41cc75f96788376>:0 
+  at Xamarin.UITest.XDB.Services.OSX.XcodeService.TestWithoutBuilding (System.String deviceId, System.String xctestrunPath, System.String derivedDataPath) [0x0002b] in <de61ebc37b494176b41cc75f96788376>:0 
+  at Xamarin.UITest.XDB.Services.OSX.iOSDeviceManagerService.StartTest (System.String deviceId) [0x00022] in <de61ebc37b494176b41cc75f96788376>:0 
+  at Xamarin.UITest.XDB.Services.iOSDeviceAgentService+<>c__DisplayClass18_0.<LaunchTestAsync>b__2 () [0x00000] in <de61ebc37b494176b41cc75f96788376>:0 
+  at Xamarin.UITest.XDB.Services.iOSDeviceAgentService.WithErrorHandling (System.Int32 eventId, System.Func`1[TResult] action, System.String errorMessage, System.Int32[] successCodes) [0x0000e] in <de61ebc37b494176b41cc75f96788376>:0 
+
+Run Settings
+    ProcessModel: InProcess
+    DisposeRunners: True
+    WorkDirectory: /Users/jay2/nv.github/Uno/build
+    MaxAgents: 1
+    NumberOfTestWorkers: 1
+    ImageRuntimeVersion: 4.0.30319
+    ImageTargetFrameworkName: .NETFramework,Version=v4.7
+    ImageRequiresX86: False
+    ImageRequiresDefaultAppDomainAssemblyResolver: False
+
+Test Run Summary
+  Overall result: Passed
+  Test Count: 1, Passed: 1, Failed: 0, Warnings: 0, Inconclusive: 0, Skipped: 0
+  Start time: 2019-11-01 15:55:44Z
+    End time: 2019-11-01 15:56:10Z
+    Duration: 26.168 seconds
+
+Results (nunit3) saved as TestResult.xml
