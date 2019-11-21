@@ -13,16 +13,10 @@
 	d:DesignHeight="2000"
 	d:DesignWidth="400">
 
-	<controls:SampleControl SampleDescription="TextBox with a delete button">
-		<controls:SampleControl.SampleContent>
-			<DataTemplate>
-				<StackPanel>
-					<TextBox Text="{Binding [MyInput], Mode=TwoWay}"/>
+	<StackPanel>
+		<TextBlock x:Name="focused" Text="" />
+		<TextBox Text="{Binding [MyInput], Mode=TwoWay}"/>
 
-					<TextBlock Text="Click on this textbox to change the focus" />
-					<TextBox/>
-				</StackPanel>
-			</DataTemplate>
-		</controls:SampleControl.SampleContent>
-	</controls:SampleControl>
+		<TextBox Header="Click on this textbox to change the focus"/>
+	</StackPanel>
 </UserControl>

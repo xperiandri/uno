@@ -237,6 +237,8 @@
 			element.id = String(contentDefinition.id);
 			element.setAttribute("XamlType", contentDefinition.type);
 			element.setAttribute("XamlHandle", `${contentDefinition.handle}`);
+			element.setAttribute("XamlIsFocusable", "false");
+
 			if (contentDefinition.isFrameworkElement) {
 				this.setAsUnarranged(element);
 			}
@@ -813,6 +815,52 @@
 				}
 
 				element.addEventListener(eventName, leavePointerHandler, onCapturePhase);
+			} else if (eventName == 'focusout') {
+				const focusOutEventHandler = (event: any) => {
+
+					if (event.relatedTarget && event.relatedTarget.getAttribute("XamlIsFocusable") == "true" || !event.relatedTarget) {
+						var xamlFocusable = event.relatedTarget.getAttribute("XamlIsFocusable");
+						console.log(`focusout: allow for [${event.relatedTarget}/${event.relatedTarget && event.relatedTarget.id}/${xamlFocusable}] set to [${event.currentTarget}/${event.currentTarget && event.currentTarget.id}]`);
+						eventHandler(event);
+					} else {
+						console.log(`focusout: prevent for [${event.relatedTarget}/${event.relatedTarget && event.relatedTarget.id}] restore to [${event.currentTarget}${event.currentTarget && event.currentTarget.id}/]`);
+
+						event.preventDefault();
+						if (event.currentTarget) {
+							// Revert focus back to previous blurring element
+							// event.currentTarget.focus();
+						}
+						else {
+							// No previous focus target, blur instead
+							event.relatedTarget.blur();
+						}
+					}
+				};
+				element.addEventListener(eventName, focusOutEventHandler, onCapturePhase);
+			} else if (eventName == 'focus') {
+
+				const focusEventHandler = (event: any) => {
+					if (event.currentTarget.getAttribute("XamlIsFocusable") == "true") {
+						console.log(`focus: allow for [${event.currentTarget}/${event.currentTarget && event.currentTarget.id}] unset for [${event.relatedTarget}/${event.relatedTarget && event.relatedTarget.id}]`);
+						eventHandler(event);
+					}
+					else {
+						var xamlFocusable = event.currentTarget.getAttribute("XamlIsFocusable");
+						console.log(`focus: prevent for [${event.currentTarget}/${event.currentTarget && event.currentTarget.id}/${xamlFocusable}], restore to [${event.relatedTarget}/${event.relatedTarget && event.relatedTarget.id}]`);
+						event.preventDefault();
+						if (event.relatedTarget) {
+							// Revert focus back to previous blurring element
+							event.relatedTarget.focus();
+						}
+						else {
+							// No previous focus target, blur instead
+							event.currentTarget.blur();
+						}
+					}
+				};
+				element.addEventListener(eventName, focusEventHandler, onCapturePhase);
+
+
 			} else {
 				element.addEventListener(eventName, eventHandler, onCapturePhase);
 			}
@@ -1171,6 +1219,28 @@
 
 		private getBBoxInternal(elementId: number): any {
 			return (<any>this.getView(elementId)).getBBox();
+		}
+
+		public setFocusable(viewId: string, isFocusable: boolean): string {
+
+			this.setFocusableInternal(Number(viewId), isFocusable);
+
+			return "oks";
+		}
+
+		public setFocusableNative(pParams: number): boolean {
+
+			const params = WindowManagerSetIsFocusableParams.unmarshal(pParams);
+
+			this.setFocusableInternal(params.HtmlId, params.IsFocusable);
+
+			return true;
+		}
+
+		public setFocusableInternal(viewId: number, isFocusable: boolean) {
+			const element = this.getView(viewId) as HTMLElement;
+
+			element.setAttribute("XamlIsFocusable", String(isFocusable));
 		}
 
 		/**

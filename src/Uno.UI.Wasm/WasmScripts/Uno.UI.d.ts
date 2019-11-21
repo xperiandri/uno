@@ -432,6 +432,9 @@ declare namespace Uno.UI {
         getBBox(elementId: number): string;
         getBBoxNative(pParams: number, pReturn: number): boolean;
         private getBBoxInternal;
+        setFocusable(viewId: string, isFocusable: boolean): string;
+        setFocusableNative(pParams: number): boolean;
+        setFocusableInternal(viewId: number, isFocusable: boolean): void;
         /**
             * Use the Html engine to measure the element using specified constraints.
             *
@@ -652,6 +655,11 @@ declare class WindowManagerSetElementTransformParams {
     M32: number;
     HtmlId: number;
     static unmarshal(pData: number): WindowManagerSetElementTransformParams;
+}
+declare class WindowManagerSetIsFocusableParams {
+    HtmlId: number;
+    IsFocusable: boolean;
+    static unmarshal(pData: number): WindowManagerSetIsFocusableParams;
 }
 declare class WindowManagerSetNameParams {
     HtmlId: number;

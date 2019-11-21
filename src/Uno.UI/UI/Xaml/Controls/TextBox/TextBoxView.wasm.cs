@@ -7,6 +7,7 @@ using Windows.UI.Xaml.Media;
 using Uno.Logging;
 using Windows.Foundation;
 using System.Globalization;
+using Uno.UI.Xaml;
 
 namespace Windows.UI.Xaml.Controls
 {
@@ -33,6 +34,7 @@ namespace Windows.UI.Xaml.Controls
 			}
 
 			SetAttribute("tabindex", "0");
+			WindowManagerInterop.SetFocusable(HtmlId, true);
 		}
 
 		private event EventHandler HtmlInput

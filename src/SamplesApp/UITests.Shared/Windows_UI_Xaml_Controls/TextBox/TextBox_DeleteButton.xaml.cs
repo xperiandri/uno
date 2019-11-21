@@ -10,6 +10,10 @@ namespace Uno.UI.Samples.Content.UITests.TextBoxControl
 		public TextBox_DeleteButton()
 		{
 			this.InitializeComponent();
+
+			global::Windows.UI.Xaml.Input.FocusManager.GotFocus += (s, e) => {
+				focused.Text = $"Focused {e.NewFocusedElement}";
+			};
 		}
 	}
 }

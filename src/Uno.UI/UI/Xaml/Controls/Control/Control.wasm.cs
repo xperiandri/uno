@@ -11,6 +11,8 @@ using Windows.UI.Xaml.Input;
 using Uno.Disposables;
 using Uno.UI;
 using View = Windows.UI.Xaml.UIElement;
+using Uno.UI.Xaml;
+using System.Runtime.CompilerServices;
 
 namespace Windows.UI.Xaml.Controls
 {
@@ -59,7 +61,7 @@ namespace Windows.UI.Xaml.Controls
 		{
 			var isFocusable = IsFocusable && !IsDelegatingFocusToTemplateChild();
 
-			SetAttribute("tabindex", isFocusable ? "0" : "-1");
+			WindowManagerInterop.SetFocusable(this.HtmlId, isFocusable);
 		}
 
 		protected virtual bool IsDelegatingFocusToTemplateChild() => false;

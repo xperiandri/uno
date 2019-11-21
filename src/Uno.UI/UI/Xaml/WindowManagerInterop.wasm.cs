@@ -119,6 +119,41 @@ namespace Uno.UI.Xaml
 
 		#endregion
 
+		#region SetFocusable
+
+		internal static void SetFocusable(IntPtr htmlId, bool isFocusable)
+		{
+			if (UseJavascriptEval)
+			{
+				FormattableString native = $"Uno.UI.WindowManager.current.setFocusable({isFocusable.ToString().ToLowerInvariant()})";
+
+				WebAssemblyRuntime.InvokeJS(native.ToStringInvariant());
+			}
+			else
+			{
+				Console.WriteLine($"setFocusable({htmlId}, {isFocusable})");
+				var parms = new WindowManagerSetIsFocusableParams
+				{
+					HtmlId = htmlId,
+					IsFocusable = isFocusable
+				};
+
+				TSInteropMarshaller.InvokeJS<WindowManagerSetIsFocusableParams, bool>("Uno:setFocusableNative", parms);
+			}
+		}
+
+		[TSInteropMessage]
+		[StructLayout(LayoutKind.Sequential, Pack = 4)]
+		private struct WindowManagerSetIsFocusableParams
+		{
+			public IntPtr HtmlId;
+
+			public bool IsFocusable;
+		}
+
+		#endregion
+
+
 		#region SetElementTransform
 
 		internal static void SetElementTransform(IntPtr htmlId, Matrix3x2 matrix)
