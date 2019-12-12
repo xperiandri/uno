@@ -206,14 +206,14 @@ namespace Windows.UI.Xaml.Controls
 
 		partial void OnInputScopeChangedPartial(DependencyPropertyChangedEventArgs e)
 		{
-			this.CoerceValue(ImeOptionsProperty);
-
 			if (e.NewValue != null)
 			{
 				var inputScope = (InputScope)e.NewValue;
 
 				UpdateInputScope(inputScope);
 			}
+
+			this.CoerceValue(ImeOptionsProperty);
 		}
 
 		protected void SetInputScope(InputTypes types)
