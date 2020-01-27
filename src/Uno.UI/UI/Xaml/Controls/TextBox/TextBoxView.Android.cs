@@ -177,6 +177,7 @@ namespace Windows.UI.Xaml.Controls
 					}
 					else
 					{
+						var drawable = ContextCompat.GetDrawable(editText.Context, mCursorDrawableRes);
 #if __ANDROID_28__
 						drawable.SetColorFilter(color, PorterDuff.Mode.SrcIn);
 #else

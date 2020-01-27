@@ -43,7 +43,7 @@ namespace Windows.UI.Xaml.Controls
 			base.NotifyDataSetChanged();
 		}
 
-		public override AndroidX.Fragment.App.App.Fragment GetItem(int position)
+		public override AndroidX.Fragment.App.Fragment GetItem(int position)
 		{
 			return _fragments[position];
 		}

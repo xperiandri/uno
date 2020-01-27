@@ -8,7 +8,7 @@ namespace Uno.UI.Extensions
 {
     public static class ToolbarExtensions
     {
-		public static Android.Graphics.Color GetTitleTextColor(this AndroidX.RecyclerView.Widget.Toolbar toolbar)
+		public static Android.Graphics.Color GetTitleTextColor(this AndroidX.AppCompat.Widget.Toolbar toolbar)
 		{
 			try
 			{
