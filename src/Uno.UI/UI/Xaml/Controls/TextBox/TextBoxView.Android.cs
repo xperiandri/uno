@@ -18,6 +18,7 @@ using Android.OS;
 using Windows.UI.Xaml.Input;
 using Uno.UI.Extensions;
 using Uno.UI.DataBinding;
+using AndroidX.Core.Content;
 
 namespace Windows.UI.Xaml.Controls
 {
