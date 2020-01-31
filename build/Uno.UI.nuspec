@@ -22,8 +22,8 @@
 		    <dependency id="Xamarin.AndroidX.AppCompat" version="1.1.0-rc1" />
 		    <dependency id="Xamarin.AndroidX.RecyclerView" version="1.1.0-rc1" />
         <dependency id="Uno.SourceGenerationTasks" version="1.32.0-dev.297" />
-        <dependency id="Uno.Core" version="1.29.0-dev.93" />
-        <dependency id="Uno.Core.Build" version="1.29.0-dev.93" />
+        <dependency id="Uno.Core" version="1.29.0" />
+        <dependency id="Uno.Core.Build" version="1.29.0" />
       </group>
 
       <!-- Android 10.0 -->
@@ -32,29 +32,29 @@
         <dependency id="Xamarin.AndroidX.AppCompat" version="1.1.0-rc1" />
         <dependency id="Xamarin.AndroidX.RecyclerView" version="1.1.0-rc1" />
         <dependency id="Uno.SourceGenerationTasks" version="1.32.0-dev.297" />
-        <dependency id="Uno.Core" version="1.29.0-dev.93" />
-        <dependency id="Uno.Core.Build" version="1.29.0-dev.93" />
+        <dependency id="Uno.Core" version="1.29.0" />
+        <dependency id="Uno.Core.Build" version="1.29.0" />
       </group>
 
       <!-- iOS -->
       <group targetFramework="xamarinios10">
         <dependency id="Uno.SourceGenerationTasks" version="1.32.0-dev.297" />
-        <dependency id="Uno.Core" version="1.29.0-dev.93" />
-        <dependency id="Uno.Core.Build" version="1.29.0-dev.93" />
+        <dependency id="Uno.Core" version="1.29.0" />
+        <dependency id="Uno.Core.Build" version="1.29.0" />
       </group>
 
       <!-- iOS -->
       <group targetFramework="xamarinmac20">
         <dependency id="Uno.SourceGenerationTasks" version="1.32.0-dev.297" />
-        <dependency id="Uno.Core" version="1.29.0-dev.93" />
-        <dependency id="Uno.Core.Build" version="1.29.0-dev.93" />
+        <dependency id="Uno.Core" version="1.29.0" />
+        <dependency id="Uno.Core.Build" version="1.29.0" />
       </group>
 
       <!-- .NET Standard 2.0 -->
       <group targetFramework="netstandard2.0">
         <dependency id="Uno.SourceGenerationTasks" version="1.32.0-dev.297" />
-        <dependency id="Uno.Core" version="1.29.0-dev.93" />
-        <dependency id="Uno.Core.Build" version="1.29.0-dev.93" />
+        <dependency id="Uno.Core" version="1.29.0" />
+        <dependency id="Uno.Core.Build" version="1.29.0" />
         <dependency id="System.Numerics.Vectors" version="4.5.0-preview1-26216-02" />
         <dependency id="System.Runtime.InteropServices.WindowsRuntime" version="4.3.0" />
         <dependency id="System.Memory" version="4.5.2" />
@@ -149,17 +149,17 @@
     <file src="..\src\Uno.UI\Bin\Release\MonoAndroid90\*.xml" target="lib\MonoAndroid90" />
 
     <!-- Android 10.0 -->
-    <file src="..\src\Uno.UI\Bin\Release\monoandroid10.0\Uno.dll" target="lib\MonoAndroid10.0" />
-    <file src="..\src\Uno.UI\Bin\Release\monoandroid10.0\Uno.pdb" target="lib\MonoAndroid10.0" />
-    <file src="..\src\Uno.UI\Bin\Release\monoandroid10.0\Uno.Foundation.dll" target="lib\MonoAndroid10.0" />
-    <file src="..\src\Uno.UI\Bin\Release\monoandroid10.0\Uno.Foundation.pdb" target="lib\MonoAndroid10.0" />
-    <file src="..\src\Uno.UI\Bin\Release\monoandroid10.0\Uno.UI.BindingHelper.Android.dll" target="lib\MonoAndroid10.0" />
-    <file src="..\src\Uno.UI\Bin\Release\monoandroid10.0\Uno.UI.BindingHelper.Android.pdb" target="lib\MonoAndroid10.0" />
-    <file src="..\src\Uno.UI\Bin\Release\monoandroid10.0\Uno.UI.dll" target="lib\MonoAndroid10.0" />
-    <file src="..\src\Uno.UI\Bin\Release\monoandroid10.0\Uno.UI.pdb" target="lib\MonoAndroid10.0" />
-    <file src="..\src\Uno.UI\Bin\Release\monoandroid10.0\Uno.Xaml.dll" target="lib\MonoAndroid10.0" />
-    <file src="..\src\Uno.UI\Bin\Release\monoandroid10.0\Uno.Xaml.pdb" target="lib\MonoAndroid10.0" />
-    <file src="..\src\Uno.UI\Bin\Release\monoandroid10.0\*.xml" target="lib\MonoAndroid10.0" />
+    <file src="..\src\Uno.UI\Bin\Release\MonoAndroid10.0\Uno.dll" target="lib\MonoAndroid10.0" />
+    <file src="..\src\Uno.UI\Bin\Release\MonoAndroid10.0\Uno.pdb" target="lib\MonoAndroid10.0" />
+    <file src="..\src\Uno.UI\Bin\Release\MonoAndroid10.0\Uno.Foundation.dll" target="lib\MonoAndroid10.0" />
+    <file src="..\src\Uno.UI\Bin\Release\MonoAndroid10.0\Uno.Foundation.pdb" target="lib\MonoAndroid10.0" />
+    <file src="..\src\Uno.UI\Bin\Release\MonoAndroid10.0\Uno.UI.BindingHelper.Android.dll" target="lib\MonoAndroid10.0" />
+    <file src="..\src\Uno.UI\Bin\Release\MonoAndroid10.0\Uno.UI.BindingHelper.Android.pdb" target="lib\MonoAndroid10.0" />
+    <file src="..\src\Uno.UI\Bin\Release\MonoAndroid10.0\Uno.UI.dll" target="lib\MonoAndroid10.0" />
+    <file src="..\src\Uno.UI\Bin\Release\MonoAndroid10.0\Uno.UI.pdb" target="lib\MonoAndroid10.0" />
+    <file src="..\src\Uno.UI\Bin\Release\MonoAndroid10.0\Uno.Xaml.dll" target="lib\MonoAndroid10.0" />
+    <file src="..\src\Uno.UI\Bin\Release\MonoAndroid10.0\Uno.Xaml.pdb" target="lib\MonoAndroid10.0" />
+    <file src="..\src\Uno.UI\Bin\Release\MonoAndroid10.0\*.xml" target="lib\MonoAndroid10.0" />
 
     <!-- iOS -->
     <file src="..\src\Uno.UI\Bin\Release\xamarinios10\Uno.dll" target="lib\xamarinios10" />
