@@ -143,7 +143,6 @@ namespace Windows.UI.Xaml.Controls
 				this,
 				// TODO: Add multi-selection support
 				new SelectionChangedEventArgs(
-					this,
 					new[] { oldSelectedItem },
 					new[] { newSelectedItem }
 				)

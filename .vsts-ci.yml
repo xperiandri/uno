@@ -20,7 +20,6 @@ resources:
 jobs:
 - template: build/ci/.azure-devops-windows.yml
 - template: build/ci/.azure-devops-docs.yml
-- template: build/ci/.azure-devops-wasm-uitests.yml
 - template: build/ci/.azure-devops-macos.yml
 - template: build/ci/.azure-devops-android-tests.yml
 - template: build/ci/.azure-devops-ios-tests.yml

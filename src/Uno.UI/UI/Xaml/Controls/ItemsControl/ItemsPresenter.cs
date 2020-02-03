@@ -29,7 +29,7 @@ namespace Windows.UI.Xaml.Controls
 		{
 			base.OnTemplatedParentChanged(e);
 
-			if (TemplatedParent is ItemsControl itemsControl && IsLoaded)
+			if (TemplatedParent is ItemsControl itemsControl)
 			{
 				itemsControl.SetItemsPresenter(this);
 			}
