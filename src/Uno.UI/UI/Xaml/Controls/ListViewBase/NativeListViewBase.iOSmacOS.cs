@@ -155,6 +155,9 @@ if (NativeLayout != null)
 		/// </summary>
 		internal void ReloadDataIfNeeded()
 		{
+			// TODO
+			if (_needsLayoutAfterReloadData) { }
+
 			if (_needsReloadData)
 			{
 				_needsReloadData = false;

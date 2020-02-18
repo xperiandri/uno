@@ -119,7 +119,7 @@ namespace Windows.UI.Xaml.Controls
 				{
 					// This measures the height correctly, even if the Text is null or empty
 					// This matches Windows where empty TextBlocks still have a height (especially useful when measuring ListView items with no DataContext)
-					var font = NSFontHelper.TryGetFont((float)FontSize, FontWeight, FontStyle, FontFamily);
+					var font = NSFontHelper.TryGetFont((float)FontSize*2, FontWeight, FontStyle, FontFamily);
 
 					var str = new NSAttributedString(Text, font);
 

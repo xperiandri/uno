@@ -21,7 +21,7 @@ namespace Windows.UI.Xaml.Media.Animation
 
 			if (Debugger.IsAttached)
 			{
-				throw new NotSupportedException();
+				//throw new NotSupportedException();
 			}
 		}
 
@@ -31,7 +31,7 @@ namespace Windows.UI.Xaml.Media.Animation
 
 			if (Debugger.IsAttached)
 			{
-				throw new NotSupportedException();
+				//throw new NotSupportedException();
 			}
 		}
 		public void Pause()
@@ -40,7 +40,7 @@ namespace Windows.UI.Xaml.Media.Animation
 
 			if (Debugger.IsAttached)
 			{
-				throw new NotSupportedException();
+				//throw new NotSupportedException();
 			}
 		}
 
@@ -63,7 +63,7 @@ namespace Windows.UI.Xaml.Media.Animation
 
 			if (Debugger.IsAttached)
 			{
-				throw new NotSupportedException();
+				//throw new NotSupportedException();
 			}
 		}
 
@@ -75,7 +75,7 @@ namespace Windows.UI.Xaml.Media.Animation
 		{
 			if (Debugger.IsAttached)
 			{
-				throw new NotSupportedException();
+				//throw new NotSupportedException();
 			}
 		}
 
@@ -89,7 +89,7 @@ namespace Windows.UI.Xaml.Media.Animation
 
 			if (Debugger.IsAttached)
 			{
-				throw new NotSupportedException();
+				//throw new NotSupportedException();
 			}
 		}
 
