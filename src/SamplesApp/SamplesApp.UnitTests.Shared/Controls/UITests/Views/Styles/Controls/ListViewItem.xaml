@@ -34,7 +34,7 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="ListViewItem">
-					<Grid x:Name="RootGrid"
+					<Grid x:Name="RootGrid" Height="50"
 						  Background="{TemplateBinding Background}"
 						  BorderBrush="{TemplateBinding BorderBrush}"
 						  BorderThickness="{TemplateBinding BorderThickness}">

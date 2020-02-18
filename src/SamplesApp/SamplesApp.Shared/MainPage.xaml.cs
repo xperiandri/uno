@@ -13,7 +13,7 @@ namespace SamplesApp
 
 			sampleControl.DataContext = new SampleChooserViewModel();
 
-#if __MACOS__
+#if false
 			Content = new TextBlock() { Text= "Hello macOS!", FontSize = 72, Margin = new Thickness(12) };
 #endif
 		}
