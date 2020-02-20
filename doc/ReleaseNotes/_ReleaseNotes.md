@@ -95,6 +95,7 @@
 - #2570 [Android/iOS] fixed ObjectDisposedException in BindingPath
 - #2107 [iOS] fixed ContentDialog doesn't block touch for background elements
 - #2108 [iOS/Android] fixed ContentDialog background doesn't change
+- [#2677] fixed flyout cannot be light dismissed by clicking outside of its content
 
 ## Release 2.0
 
