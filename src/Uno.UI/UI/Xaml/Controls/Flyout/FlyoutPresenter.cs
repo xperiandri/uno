@@ -17,8 +17,7 @@ namespace Windows.UI.Xaml.Controls
 			if (this.GetTemplateRoot() is FrameworkElement root && this.Parent is FlyoutBasePopupPanel panel)
 			{
 				// allow flyout to be closed by clicking outside its content
-				var pointer = args.GetCurrentPoint(this);
-				var rootCoords = this.TransformToVisual(root).TransformPoint(pointer.Position);
+				var rootCoords = args.GetCurrentPoint(root).Position;
 
 				if (0 > rootCoords.X || rootCoords.X > root.ActualWidth ||
 					0 > rootCoords.Y || rootCoords.Y > root.ActualHeight)
