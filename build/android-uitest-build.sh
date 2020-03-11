@@ -9,7 +9,7 @@ cd $BUILD_SOURCESDIRECTORY/build
 export IsUiAutomationMappingEnabled=true
 
 # build the sample and tests, while the emulator is starting
-msbuild /r /p:Configuration=$BUILDCONFIGURATION $BUILD_SOURCESDIRECTORY/src/SamplesApp/SamplesApp.Droid/SamplesApp.Droid.csproj
+msbuild /r /p:Configuration=$BUILDCONFIGURATION $BUILD_SOURCESDIRECTORY/src/SamplesApp/SamplesApp.Droid/SamplesApp.Droid.csproj # /bl:$BUILD_ARTIFACTSTAGINGDIRECTORY/android/build.binlog
 
 mkdir -p $BUILD_ARTIFACTSTAGINGDIRECTORY/android
 cp $BUILD_SOURCESDIRECTORY/src/SamplesApp/SamplesApp.Droid/bin/$BUILDCONFIGURATION/uno.platform.unosampleapp-Signed.apk $BUILD_ARTIFACTSTAGINGDIRECTORY/android
