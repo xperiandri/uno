@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Data;
 
 namespace Windows.UI.Xaml.Controls
 {
-	//TODO: support Day/Month/YearVisible (Task 17591)
+	//TODO#2780: support Day/Month/YearVisible
 	public partial class DatePickerFlyout : PickerFlyoutBase
 	{
 		#region Template Parts
@@ -25,6 +25,7 @@ namespace Windows.UI.Xaml.Controls
 
 		public event EventHandler<DatePickedEventArgs> DatePicked;
 
+		private readonly SerialDisposable _presenterCommandsDisposable = new SerialDisposable();
 		private readonly SerialDisposable _presenterLoadedDisposable = new SerialDisposable();
 		private readonly SerialDisposable _presenterUnloadedDisposable = new SerialDisposable();
 		private bool _isInitialized;
@@ -86,19 +87,6 @@ namespace Windows.UI.Xaml.Controls
 			_presenter.Unloaded += OnPresenterUnloaded;
 
 			return _presenter;
-
-			void OnPresenterLoaded(object sender, RoutedEventArgs e)
-			{
-				AttachFlyoutCommand(AcceptButtonPartName, x => x.Accept());
-				AttachFlyoutCommand(DismissButtonPartName, x => x.Dismiss());
-
-				_presenterLoadedDisposable.Disposable = null;
-			}
-			void OnPresenterUnloaded(object sender, RoutedEventArgs e)
-			{
-				_presenterLoadedDisposable.Disposable = null;
-				_presenterUnloadedDisposable.Disposable = null;
-			}
 		}
 
 		#region Content DependencyProperty
@@ -135,15 +123,60 @@ namespace Windows.UI.Xaml.Controls
 		private void DatePickerFlyout_Opening(object sender, EventArgs e)
 		{
 			InitializeContent();
+			UpdateSelectorDate(Date);
+		}
+
+		private void DatePickerFlyout_Closed(object sender, EventArgs e)
+		{
+			_selector.Cancel();
+		}
+
+		private void OnPresenterLoaded(object sender, RoutedEventArgs e)
+		{
+			var disposables = new CompositeDisposable();
+			_presenterCommandsDisposable.Disposable = disposables;
+
+			AttachFlyoutCommand(AcceptButtonPartName, x => x.Accept()).DisposeWith(disposables);
+			AttachFlyoutCommand(DismissButtonPartName, x => x.Dismiss()).DisposeWith(disposables);
+
+			_presenterLoadedDisposable.Disposable = null;
+		}
+
+		private void OnPresenterUnloaded(object sender, RoutedEventArgs e)
+		{
+			_presenterCommandsDisposable.Disposable = null;
+			_presenterLoadedDisposable.Disposable = null;
+			_presenterUnloadedDisposable.Disposable = null;
 		}
 
 		partial void OnDateChangedPartialNative(DateTimeOffset oldDate, DateTimeOffset newDate)
 		{
+			UpdateSelectorDate(newDate);
+		}
+
+		private void Accept()
+		{
+			_selector.SaveValue();
+			Hide(false);
+
+			DatePicked?.Invoke(this, new DatePickedEventArgs(_selector.Date, Date));
+		}
+
+		private void Dismiss()
+		{
+			_selector.Cancel();
+			Hide(false);
+		}
+
+		private void UpdateSelectorDate(DateTimeOffset value)
+		{
+			if (!_isInitialized) return;
+
 			// The date coerced by UIDatePicker doesn't propagate back to DatePickerSelector (#137137)
 			// When the user selected an invalid date, a `ValueChanged` will be raised after coercion to propagate the coerced date.
 			// However, when the `Date` is set below, there no `ValueChanged` to propagate the coerced date.
 			// To address this, we clamp the date between the valid range.
-			var validDate = newDate;
+			var validDate = value;
 			validDate = validDate > MaxYear ? MaxYear : validDate;
 			validDate = validDate < MinYear ? MinYear : validDate;
 
@@ -163,26 +196,7 @@ namespace Windows.UI.Xaml.Controls
 			}
 		}
 
-		private void DatePickerFlyout_Closed(object sender, EventArgs e)
-		{
-			_selector.Cancel();
-		}
-
-		private void Accept()
-		{
-			_selector.SaveValue();
-			Hide(false);
-
-			DatePicked?.Invoke(this, new DatePickedEventArgs(_selector.Date, Date));
-		}
-
-		private void Dismiss()
-		{
-			_selector.Cancel();
-			Hide(false);
-		}
-
-		private void AttachFlyoutCommand(string targetButtonName, Action<DatePickerFlyout> action)
+		private IDisposable AttachFlyoutCommand(string targetButtonName, Action<DatePickerFlyout> action)
 		{
 			if (_presenter.FindName(targetButtonName) is Button button)
 			{
@@ -190,8 +204,16 @@ namespace Windows.UI.Xaml.Controls
 				{
 					var self = WeakReferencePool.RentSelfWeakReference(this);
 					button.Command = new DelegateCommand(() => (self.Target as DatePickerFlyout)?.Apply(action));
+
+					return Disposable.Create(() =>
+					{
+						button.Command = null;
+						self.Dispose();
+					});
 				}
 			}
+
+			return Disposable.Empty;
 		}
 
 		private void BindToContent(string propertyName)

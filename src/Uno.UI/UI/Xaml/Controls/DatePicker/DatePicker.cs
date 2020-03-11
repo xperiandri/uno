@@ -35,6 +35,7 @@ namespace Windows.UI.Xaml.Controls
 
 		private void OnDatePropertyChanged(DateTimeOffset newValue, DateTimeOffset oldValue)
 		{
+			// pass newValue to SelectedDate, except when originated from SelectedDate to avoid ping pong
 			if ((SelectedDate != newValue) &&
 				!(newValue == UnsetDateValue && !SelectedDate.HasValue))
 			{
@@ -203,7 +204,6 @@ namespace Windows.UI.Xaml.Controls
 		#endregion
 
 		private Button _flyoutButton;
-		private DatePickerFlyout _flyout;
 
 		private TextBlock _dayTextBlock;
 		private TextBlock _monthTextBlock;
@@ -270,33 +270,38 @@ namespace Windows.UI.Xaml.Controls
 			if (_flyoutButton != null)
 			{
 #if __IOS__ || __ANDROID__
-				_flyoutButton.Flyout = _flyout = new DatePickerFlyout()
+				var flyout = new DatePickerFlyout()
 				{
 					Date = Date,
 					MinYear = MinYear,
 					MaxYear = MaxYear,
 				};
+				_flyoutButton.Flyout = flyout;
 
-				_flyout.Opened += (s, e) => _flyout.Date = SelectedDate ?? DateTimeOffset.Now;
-				_flyout.DatePicked += (s, e) => Date = e.NewDate;
+				flyout.Opened += (s, e) => flyout.Date = SelectedDate ?? DateTimeOffset.Now;
+				flyout.DatePicked += (s, e) => Date = e.NewDate;
 
 				BindToFlyout(nameof(MinYear));
 				BindToFlyout(nameof(MaxYear));
-				_flyout.BindToEquivalentProperty(this, nameof(LightDismissOverlayMode));
-				_flyout.BindToEquivalentProperty(this, nameof(LightDismissOverlayBackground));
+				flyout.BindToEquivalentProperty(this, nameof(LightDismissOverlayMode));
+				flyout.BindToEquivalentProperty(this, nameof(LightDismissOverlayBackground));
 #endif
 			}
 		}
 
 		private void BindToFlyout(string propertyName)
 		{
-			this.Binding(propertyName, propertyName, _flyout, BindingMode.TwoWay);
+			this.Binding(propertyName, propertyName, _flyoutButton.Flyout, BindingMode.TwoWay);
 		}
 
 		private void InitializeTextBlocks(IFrameworkElement container)
 		{
 			if (container.GetTemplateChild(FlyoutButtonGridPartName) is Grid grid)
 			{
+				/* DatePicker normally contains 3 textblocks meant for day/month/year with a different Grid.Column each.
+				 * We need to shuffle the columns with the order dictated by current culture, eg: yyyy/mm/dd vs mm/dd/yyyy...
+				 * Since we can't just "move" the column, we have to move the textblocks' column, and
+				 * swap the relevant properties (eg: ColumnDefinition.Width) from the old column to the new one. */
 				var items = GetOrderedTextBlocksForCulture(CultureInfo.CurrentCulture);
 				var oldColumnInfos = new[] { DayColumnPartName, MonthColumnPartName, YearColumnPartName }
 					// TODO: add safe-guard when GetTemplateChild(columnName) is implemented
@@ -320,10 +325,6 @@ namespace Windows.UI.Xaml.Controls
 		private (TextBlock Item, int OldIndex, int NewIndex)[] GetOrderedTextBlocksForCulture(CultureInfo culture)
 		{
 			var currentDateFormat = culture.DateTimeFormat.ShortDatePattern;
-
-			var dayIndex = currentDateFormat.IndexOf("d", StringComparison.InvariantCultureIgnoreCase);
-			var monthIndex = currentDateFormat.IndexOf("m", StringComparison.InvariantCultureIgnoreCase);
-			var yearIndex = currentDateFormat.IndexOf("y", StringComparison.InvariantCultureIgnoreCase);
 
 			return new (int Index, string SortKey, TextBlock Item)[]
 				{
