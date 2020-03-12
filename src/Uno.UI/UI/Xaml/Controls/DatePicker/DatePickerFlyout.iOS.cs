@@ -10,6 +10,7 @@ using Uno.Extensions;
 using Uno.UI;
 using Uno.UI.Common;
 using Uno.UI.DataBinding;
+using Windows.Foundation;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 
@@ -23,7 +24,7 @@ namespace Windows.UI.Xaml.Controls
 		public const string DismissButtonPartName = "DismissButton";
 		#endregion
 
-		public event EventHandler<DatePickedEventArgs> DatePicked;
+		public event TypedEventHandler<DatePickerFlyout, DatePickedEventArgs> DatePicked;
 
 		private readonly SerialDisposable _presenterCommandsDisposable = new SerialDisposable();
 		private readonly SerialDisposable _presenterLoadedDisposable = new SerialDisposable();

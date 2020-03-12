@@ -8,13 +8,14 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Automation.Peers;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Media;
+using Windows.Foundation;
 
 namespace Windows.UI.Xaml.Controls
 {
 	public partial class DatePicker : Control
 	{
 		public event EventHandler<DatePickerValueChangedEventArgs> DateChanged;
-		public event EventHandler<DatePickerSelectedValueChangedEventArgs> SelectedDateChanged;
+		public event TypedEventHandler<DatePicker, DatePickerSelectedValueChangedEventArgs> SelectedDateChanged;
 
 		private static readonly DateTimeOffset UnsetDateValue = DateTimeOffset.MinValue;
 
@@ -51,8 +52,8 @@ namespace Windows.UI.Xaml.Controls
 		partial void OnDateChangedPartial();
 		#endregion
 
-		#region Property: SelectedDate
-		public static readonly DependencyProperty SelectedDateProperty = DependencyProperty.Register(
+		#region SelectedDate
+		public static DependencyProperty SelectedDateProperty { get; } = DependencyProperty.Register(
 			nameof(SelectedDate),
 			typeof(DateTimeOffset?),
 			typeof(DatePicker),

@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Text;
 using Uno.UI;
 using Uno.UI.Common;
+using Windows.Foundation;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 
@@ -14,7 +15,7 @@ namespace Windows.UI.Xaml.Controls
 {
 	public partial class DatePickerFlyout : PickerFlyoutBase
 	{
-		public event EventHandler<DatePickedEventArgs> DatePicked;
+		public event TypedEventHandler<DatePickerFlyout, DatePickedEventArgs> DatePicked;
 
 		private DatePickerDialog _dialog;
 
