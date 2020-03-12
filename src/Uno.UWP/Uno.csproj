@@ -47,28 +47,14 @@
 	</ItemGroup>
 	
 	<ItemGroup Condition=" '$(TargetFramework)' == 'MonoAndroid90'">
-		<PackageReference Include="Xamarin.AndroidX.Legacy.Support.v4">
-			<Version>1.0.0-rc1</Version>
-			<PrivateAssets>none</PrivateAssets>
-		</PackageReference>
-		<PackageReference Include="Xamarin.AndroidX.AppCompat">
-			<Version>1.1.0-rc1</Version>
-			<PrivateAssets>none</PrivateAssets>
-		</PackageReference>
-		<PackageReference Include="Xamarin.AndroidX.Fragment">
-			<Version>1.1.0-rc1</Version>
-		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.Legacy.Support.v4"/>
+		<PackageReference Include="Xamarin.AndroidX.AppCompat"/>
+		<PackageReference Include="Xamarin.AndroidX.Fragment"/>
 	</ItemGroup>
 
 	<ItemGroup Condition=" '$(TargetFramework)' == 'MonoAndroid10.0'">
-		<PackageReference Include="Xamarin.AndroidX.Legacy.Support.v4">
-			<Version>1.0.0-rc1</Version>
-			<PrivateAssets>none</PrivateAssets>
-		</PackageReference>
-		<PackageReference Include="Xamarin.AndroidX.AppCompat">
-			<Version>1.1.0-rc1</Version>
-			<PrivateAssets>none</PrivateAssets>
-		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.Legacy.Support.v4"/>
+		<PackageReference Include="Xamarin.AndroidX.AppCompat"/>
 	</ItemGroup>
 
 	<ItemGroup Condition="$(IsMonoAndroid) or $(IsXamarinIOS) or '$(TargetFramework)'=='xamarinmac20'">
