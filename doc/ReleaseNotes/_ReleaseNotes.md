@@ -1,7 +1,11 @@
-# Release notes
+﻿# Release notes
 
 ### Features
 
+- Added new `ElevatedView` in the `Uno.Toolkit` to provide elevation & rounded corners on all platforms
+  (not supported on Windows yet, because Uno needs to target framework `10.0.18362.0`)
+- [Android] Support for `Application.Current.Exit`
+- Support for `Windows.Storage.FileProperties.BasicProperties.DateModified`
 - Added CornerRadius support to more default styles to match UWP (for list of updated styles see PR [#2713])
 - Support for `FontIcon` on macOS
 - Support for `PhoneCallManager.ShowPhoneCallUI` on macOS
@@ -45,9 +49,12 @@
 - Add XamlReader support for Primitive static resources
 - [Android] Add support for non-native `Popup` by default. Can be enabled through `FeatureConfiguration.Popup.UseNativePopup` set to false (See #2533 for more details)
 - Add template tags for the VS2019 VSIX template search experience
+- [iOS] #2746 Fix border thickness when a corner radius is set
+- [Android] #2762 ProgressRing wasn't displaying inside a StackPanel
 
 ### Breaking changes
 - `IconElement.AddIconElementView` is now `internal` so it is not accessible from outside.
+- On iOS, the parent of the `ListViwItem` is now the `NativeListViewBase` (was the `ListView` it self) as described here https://github.com/unoplatform/uno/blob/master/doc/articles/controls/ListViewBase.md#difference-in-the-visual-tree
 
 ### Bug fixes
 
@@ -68,7 +75,7 @@
 - #2287 Vertical `ListView` containing a horizontal `ScrollViewer`: horizontal scrolling is difficult, only works when the gesture is perfectly horizontal
 - #2130 Grid - fix invalid measure when total star size is 0
 - [iOS] Fix invalid image measure on constrained images with `Margin`
-- [#2364] fixed missing Xaml IntelliSense on newly created project 
+- [#2364] fixed missing Xaml IntelliSense on newly created project
 - `ViewBox` no longer alters its child's `RenderTransform`
 - [#2033] Add Missing `LostFocus` Value to `UpdateSourceTrigger` Enum
 - [Android] Fix Image margin calculation on fixed size
@@ -96,6 +103,7 @@
 - #2107 [iOS] fixed ContentDialog doesn't block touch for background elements
 - #2108 [iOS/Android] fixed ContentDialog background doesn't change
 - [#2677] fixed flyout cannot be light dismissed by clicking outside of its content
+- #2680 [Wasm] Fix ComboBox should not stretch to the full window width
 
 ## Release 2.0
 
