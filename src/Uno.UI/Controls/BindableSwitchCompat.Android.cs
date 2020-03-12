@@ -77,7 +77,9 @@ namespace Uno.UI.Controls
 			if (newValue is SolidColorBrush asColorBrush)
 			{
 #if __ANDROID_28__
+#pragma warning disable 618 // SetColorFilter is deprecated
 				ThumbDrawable?.SetColorFilter(asColorBrush.Color, PorterDuff.Mode.SrcIn);
+#pragma warning restore 618 // SetColorFilter is deprecated
 #else
 				ThumbDrawable?.SetColorFilter(new BlendModeColorFilter(asColorBrush.Color, BlendMode.SrcIn));
 #endif
@@ -105,7 +107,9 @@ namespace Uno.UI.Controls
 			if (newValue is SolidColorBrush asColorBrush)
 			{
 #if __ANDROID_28__
+#pragma warning disable 618 // SetColorFilter is deprecated
 				TrackDrawable?.SetColorFilter(asColorBrush.Color, PorterDuff.Mode.SrcIn);
+#pragma warning restore 618 // SetColorFilter is deprecated
 #else
 				TrackDrawable?.SetColorFilter(new BlendModeColorFilter(asColorBrush.Color, BlendMode.SrcIn));
 #endif

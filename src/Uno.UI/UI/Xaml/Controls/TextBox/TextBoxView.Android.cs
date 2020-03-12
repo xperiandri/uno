@@ -163,6 +163,7 @@ namespace Windows.UI.Xaml.Controls
 					var editor = _editorField.Get(editText);
 
 #if __ANDROID_28__
+#pragma warning disable 618 // SetColorFilter is deprecated
 					if ((int)Build.VERSION.SdkInt < 28) // 28 means BuildVersionCodes.P
 					{
 						var drawables = new Drawable[2];
@@ -178,6 +179,7 @@ namespace Windows.UI.Xaml.Controls
 						drawable.SetColorFilter(color, PorterDuff.Mode.SrcIn);
 						_cursorDrawableField.Set(editor, drawable);
 					}
+#pragma warning restore 618 // SetColorFilter is deprecated
 #else
 					if ((int)Build.VERSION.SdkInt < 28) // 28 means BuildVersionCodes.P
 					{
