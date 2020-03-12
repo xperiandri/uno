@@ -324,15 +324,16 @@ namespace Windows.UI.Xaml.Controls
 				_textContainer.LineFragmentPadding = 0;
 				_textContainer.LineBreakMode = GetLineBreakMode();
 				_textContainer.MaximumNumberOfLines = (nuint)GetLines();
-				
+
+				// Configure textStorage
+				_textStorage = new NSTextStorage();
+				_textStorage.SetString(_attributedString);
+
 				// Configure layoutManager
 				_layoutManager = new NSLayoutManager();
 				_layoutManager.AddTextContainer(_textContainer);
 
-				// Configure textStorage
-				_textStorage = new NSTextStorage();
 				_textStorage.AddLayoutManager(_layoutManager);
-				_textStorage.SetString(_attributedString);
 			}
 		}
 
@@ -340,8 +341,8 @@ namespace Windows.UI.Xaml.Controls
 		{
 			_textContainer.Size = size;
 
-            // Required for GetUsedRectForTextContainer to return a value.
-            _layoutManager.GetGlyphRange(_textContainer);
+			// Required for GetUsedRectForTextContainer to return a value.
+			_layoutManager.GlyphRangeForBoundingRect(new CGRect(CGPoint.Empty, size), _textContainer);
 
 			return _layoutManager.GetUsedRectForTextContainer(_textContainer).Size;
 		}
