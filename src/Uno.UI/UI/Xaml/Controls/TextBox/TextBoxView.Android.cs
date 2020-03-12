@@ -19,6 +19,7 @@ using Windows.UI.Xaml.Input;
 using Uno.UI.Extensions;
 using Uno.UI.DataBinding;
 using AndroidX.Core.Content;
+using AndroidX.Core.Graphics;
 
 namespace Windows.UI.Xaml.Controls
 {
@@ -160,21 +161,40 @@ namespace Windows.UI.Xaml.Controls
 
 					var mCursorDrawableRes = _cursorDrawableResField.GetInt(editText);
 					var editor = _editorField.Get(editText);
+
+#if __ANDROID_28__
 					if ((int)Build.VERSION.SdkInt < 28) // 28 means BuildVersionCodes.P
 					{
 						var drawables = new Drawable[2];
 						drawables[0] = ContextCompat.GetDrawable(editText.Context, mCursorDrawableRes);
 						drawables[1] = ContextCompat.GetDrawable(editText.Context, mCursorDrawableRes);
-						drawables[0].SetColorFilter(new BlendModeColorFilter(color, BlendMode.SrcIn));
-						drawables[1].SetColorFilter(new BlendModeColorFilter(color, BlendMode.SrcIn));
+						drawables[0].SetColorFilter(color, PorterDuff.Mode.SrcIn);
+						drawables[1].SetColorFilter(color, PorterDuff.Mode.SrcIn);
 						_cursorDrawableField.Set(editor, drawables);
 					}
 					else
 					{
 						var drawable = ContextCompat.GetDrawable(editText.Context, mCursorDrawableRes);
-						drawable.SetColorFilter(new BlendModeColorFilter(color, BlendMode.SrcIn));
+						drawable.SetColorFilter(color, PorterDuff.Mode.SrcIn);
 						_cursorDrawableField.Set(editor, drawable);
 					}
+#else
+					if ((int)Build.VERSION.SdkInt < 28) // 28 means BuildVersionCodes.P
+					{
+						var drawables = new Drawable[2];
+						drawables[0] = ContextCompat.GetDrawable(editText.Context, mCursorDrawableRes);
+						drawables[1] = ContextCompat.GetDrawable(editText.Context, mCursorDrawableRes);
+						drawables[0].SetColorFilter(new BlendModeColorFilterCompat(color, BlendModeCompat.SrcIn));
+						drawables[1].SetColorFilter(new BlendModeColorFilterCompat(color, BlendModeCompat.SrcIn));
+						_cursorDrawableField.Set(editor, drawables);
+					}
+					else
+					{
+						var drawable = ContextCompat.GetDrawable(editText.Context, mCursorDrawableRes);
+						drawable.SetColorFilter(new BlendModeColorFilterCompat(color, BlendModeCompat.SrcIn));
+						_cursorDrawableField.Set(editor, drawable);
+					}
+#endif
 				}
 				catch (Exception)
 				{

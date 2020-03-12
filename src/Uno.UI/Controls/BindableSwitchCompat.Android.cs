@@ -76,13 +76,17 @@ namespace Uno.UI.Controls
 		{
 			if (newValue is SolidColorBrush asColorBrush)
 			{
+#if __ANDROID_28__
+				ThumbDrawable?.SetColorFilter(asColorBrush.Color, PorterDuff.Mode.SrcIn);
+#else
 				ThumbDrawable?.SetColorFilter(new BlendModeColorFilter(asColorBrush.Color, BlendMode.SrcIn));
+#endif
 			}
 		}
 
-		#endregion
+#endregion
 
-		#region TrackTint DependencyProperty
+#region TrackTint DependencyProperty
 
 		/// <summary> 
 		/// The color used to tint the appearance of the track.
@@ -100,11 +104,15 @@ namespace Uno.UI.Controls
 		{
 			if (newValue is SolidColorBrush asColorBrush)
 			{
+#if __ANDROID_28__
+				TrackDrawable?.SetColorFilter(asColorBrush.Color, PorterDuff.Mode.SrcIn);
+#else
 				TrackDrawable?.SetColorFilter(new BlendModeColorFilter(asColorBrush.Color, BlendMode.SrcIn));
+#endif
 			}
 		}
 
-		#endregion
+#endregion
 
 		private void OnCheckedChange(object sender, CheckedChangeEventArgs e)
 		{
