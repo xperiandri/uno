@@ -122,5 +122,10 @@ namespace Windows.UI.Xaml.Media
 				popup.IsOpen = false;
 			}
 		}
+
+		internal static IEnumerable<UIElement> FindAllElementsInHostCoordinatesPointStatic(Point intersectingPoint, UIElement subTree, bool includeAllElements)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

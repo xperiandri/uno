@@ -7,13 +7,14 @@ using System.Text;
 using Uno.Extensions;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Markup;
 
 namespace Windows.UI.Xaml.Controls
 {
 	[ContentProperty(Name = "Items")]
 	public partial class MenuFlyout : FlyoutBase
-    {
+	{
 		private MenuFlyoutPresenter _presenter;
 
 		public MenuFlyout()
@@ -23,6 +24,8 @@ namespace Windows.UI.Xaml.Controls
 
 			Items = collection;
 		}
+
+		internal FocusInputDeviceKind InputDeviceTypeUsedToOpen { get; set; }
 
 		private void OnItemsVectorChanged(IObservableVector<MenuFlyoutItemBase> sender, IVectorChangedEventArgs e)
 		{

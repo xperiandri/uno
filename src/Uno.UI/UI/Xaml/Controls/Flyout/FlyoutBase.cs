@@ -227,5 +227,10 @@ namespace Windows.UI.Xaml.Controls.Primitives
 			var flyout = GetAttachedFlyout(flyoutOwner);
 			flyout?.ShowAt(flyoutOwner);
 		}
+
+		internal static Rect CalculateAvailableWindowRect(bool isMenuFlyout, Popup popup, object placementTarget, bool hasTargetPosition, Point positionPoint, bool isFull)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }
