@@ -165,7 +165,7 @@ namespace SamplesApp.UITests.Windows_UI_Xaml_Controls.ComboBoxTests
 			Assert.AreEqual(popupResult.Rect.Width, sampleControlResult.Rect.Width, "The popup must stretch horizontally");
 			Assert.IsTrue(popupResult.Rect.Height < sampleControlResult.Rect.Height / 2, "The popup should not stretch to the height of the screen");
 
-			_app.TapCoordinates(sampleControlResult.Rect.Width / 2, popupResult.Rect.Bottom + 20);
+			_app.TapCoordinates(sampleControlResult.Rect.Width / 2, popupResult.Rect.Y - 20);
 
 			_app.WaitForNoElement("PopupBorder");
 
